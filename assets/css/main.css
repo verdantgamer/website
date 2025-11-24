@@ -1634,8 +1634,8 @@ input, select, textarea {
 				top: 2.6em;
 				display: block;
 				font-size: 0.8em;
-				background: #878787;
-				color: #e4e4e4;
+				background: #649e66;
+				color: #649e66;
 				width: 2em;
 				height: 2em;
 				border-radius: 2em;
@@ -1657,7 +1657,7 @@ input, select, textarea {
 	form label {
 		font-weight: 600;
 		text-transform: uppercase;
-		color: #888;
+		color: #649e66;
 		display: block;
 		margin: 0 0 1em 0;
 	}
@@ -1674,7 +1674,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		display: block;
 		border: 0;
-		background: #e8e8e8;
+		background: #649e66;
 		width: 100%;
 		box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
@@ -1722,7 +1722,7 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border-top: solid 1px #E5E5E5;
+			border-top: solid 1px #649e66;
 		}
 
 			table tbody tr:first-child {
@@ -1740,7 +1740,7 @@ input, select, textarea {
 		}
 
 		table thead {
-			background: #878787;
+			background: #649e66;
 			color: #fff;
 			font-weight: 400;
 			text-transform: uppercase;
