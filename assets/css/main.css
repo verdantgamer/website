@@ -74,6 +74,29 @@ input, select, textarea {
 
 /* Basic */
 
+.cart-icon {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.cart-icon img {
+	width: 32px;
+	height: 32px;
+}
+
+.cart-count {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	background: #3a7d44;
+	color: #fff;
+	font-size: 12px;
+	padding: 2px 6px;
+	border-radius: 50%;
+}
+
+
 	html {
 		box-sizing: border-box;
 	}
