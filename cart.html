@@ -1,19 +1,118 @@
-<h1>Your Cart</h1>
-<div id="cart-items"></div>
-<p id="cart-total"></p>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Your Cart | The Verdant Gamer</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
 
+<div id="wrapper">
+
+	<!-- Header -->
+	<header id="header">
+		<a href="index.html" class="logo">
+			<strong>Verdant</strong> Gamer
+		</a>
+	</header>
+
+	<!-- Nav -->
+	<nav id="nav">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="plant.html">Plant Stuff</a></li>
+			<li><a href="gaming.html">Gaming Stuff</a></li>
+			<li class="active"><a href="cart.html">Cart</a></li>
+		</ul>
+	</nav>
+
+	<!-- Main -->
+	<div id="main">
+		<section class="inner">
+			<header class="major">
+				<h1>Your Cart</h1>
+			</header>
+
+			<div id="cart-items"></div>
+
+			<hr />
+
+			<p id="cart-total"><strong>Total:</strong> $0</p>
+
+			<ul class="actions">
+				<li>
+					<a href="#" class="button primary" onclick="clearCart()">Clear Cart</a>
+				</li>
+				<li>
+					<a href="index.html" class="button">Continue Shopping</a>
+				</li>
+			</ul>
+
+			<p><em>Local pickup only. No shipping available.</em></p>
+		</section>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<p>
+				<a href="index.html">Home</a> |
+				<a href="plant.html">Plants</a> |
+				<a href="gaming.html">Gaming</a> |
+				<a href="cart.html">Cart</a>
+			</p>
+			<p>&copy; The Verdant Gamer</p>
+		</div>
+	</footer>
+
+</div>
+
+<script src="assets/js/cart.js"></script>
 <script>
-	let cart = JSON.parse(localStorage.getItem('cart')) || [];
-	let container = document.getElementById('cart-items');
-	let total = 0;
+	function renderCart() {
+		let cart = JSON.parse(localStorage.getItem('cart')) || [];
+		let container = document.getElementById('cart-items');
+		let total = 0;
 
-	cart.forEach(function(item) {
-		let p = document.createElement('p');
-		p.textContent = item.name + ' - $' + item.price;
-		container.appendChild(p);
-		total += item.price;
-	});
+		container.innerHTML = '';
 
-	document.getElementById('cart-total').textContent =
-		'Total: $' + total;
+		if (cart.length === 0) {
+			container.innerHTML = '<p>Your cart is empty.</p>';
+			document.getElementById('cart-total').innerHTML =
+				'<strong>Total:</strong> $0';
+			return;
+		}
+
+		cart.forEach(function(item, index) {
+			let p = document.createElement('p');
+			p.innerHTML =
+				item.name + ' — $' + item.price +
+				' <a href="#" onclick="removeItem(' + index + ')">[remove]</a>';
+			container.appendChild(p);
+			total += item.price;
+		});
+
+		document.getElementById('cart-total').innerHTML =
+			'<strong>Total:</strong> $' + total;
+	}
+
+	function removeItem(index) {
+		let cart = JSON.parse(localStorage.getItem('cart')) || [];
+		cart.splice(index, 1);
+		localStorage.setItem('cart', JSON.stringify(cart));
+		renderCart();
+		updateCartCount();
+	}
+
+	function clearCart() {
+		localStorage.removeItem('cart');
+		renderCart();
+		updateCartCount();
+	}
+
+	renderCart();
 </script>
+
+</body>
+</html>
