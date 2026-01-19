@@ -1,0 +1,19 @@
+<h1>Your Cart</h1>
+<div id="cart-items"></div>
+<p id="cart-total"></p>
+
+<script>
+	let cart = JSON.parse(localStorage.getItem('cart')) || [];
+	let container = document.getElementById('cart-items');
+	let total = 0;
+
+	cart.forEach(function(item) {
+		let p = document.createElement('p');
+		p.textContent = item.name + ' - $' + item.price;
+		container.appendChild(p);
+		total += item.price;
+	});
+
+	document.getElementById('cart-total').textContent =
+		'Total: $' + total;
+</script>
