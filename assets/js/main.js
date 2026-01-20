@@ -63,3 +63,16 @@
 				});
 
 })(jQuery);
+
+/* Mobile hamburger toggle */
+document.addEventListener('DOMContentLoaded', function () {
+	var toggle = document.querySelector('.nav-toggle');
+	var nav = document.getElementById('nav');
+
+	if (toggle && nav) {
+		toggle.addEventListener('click', function (e) {
+			e.preventDefault();
+			nav.classList.toggle('visible');
+		});
+	}
+});
