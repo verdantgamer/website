@@ -106,7 +106,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f0f0f0;
+		background: #F7F8C9;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1710,7 +1710,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			background: #f0f0f0;
+			background: #F7F8C9;
 		}
 
 	form textarea {
@@ -1774,7 +1774,7 @@ input, select, textarea {
 		}
 
 		table tfoot {
-			background: #F0F0F0;
+			background: #F7F8C9;
 			border-top: solid 2px #E5E5E5;
 		}
 
@@ -2078,7 +2078,7 @@ input, select, textarea {
 			display: block;
 			padding: 0.3em 1em 0.3em 1em;
 			border: 0;
-			border-top: solid 1px #f0f0f0;
+			border-top: solid 1px #F7F8C9;
 			outline: 0;
 		}
 
@@ -2228,7 +2228,7 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		border-top: solid 2px #e5e5e5;
-		background: #f0f0f0;
+		background: #F7F8C9;
 		padding: 6em 0 8em 0;
 	}
 
