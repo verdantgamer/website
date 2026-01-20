@@ -90,7 +90,7 @@ input, select, textarea {
 	top: -6px;
 	right: -6px;
 	background: #00BD75;
-	color: #F7F8C9;
+	color: #F5DA7C;
 	font-size: 12px;
 	padding: 2px 6px;
 	border-radius: 50%;
@@ -106,7 +106,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #F7F8C9;
+		background: #F5DA7C;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -123,7 +123,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
-		color: #F7F8C9;
+		color: #F5DA7C;
 		line-height: 1.65em;
 		font-size: 15pt;
 	}
@@ -159,7 +159,7 @@ input, select, textarea {
 		-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-		color: #F7F8C9;
+		color: #F5DA7C;
 		text-decoration: none;
 		border-bottom: solid 1px #DD367C;
 	}
@@ -1710,7 +1710,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			background: #F7F8C9;
+			background: #F5DA7C;
 		}
 
 	form textarea {
@@ -1764,7 +1764,7 @@ input, select, textarea {
 
 		table thead {
 			background: #00BD75;
-			color: #F7F8C9;
+			color: #F5DA7C;
 			font-weight: 400;
 			text-transform: uppercase;
 			border: 0;
@@ -1774,8 +1774,8 @@ input, select, textarea {
 		}
 
 		table tfoot {
-			background: #F7F8C9;
-			border-top: solid 2px #E5E5E5;
+			background: #F5DA7C;
+			border-top: solid 2px #F5DA7C;
 		}
 
 /* Button */
@@ -1793,7 +1793,7 @@ input, select, textarea {
 		position: relative;
 		display: inline-block;
 		background: #00BD75;
-		color: #F7F8C9 !important;
+		color: #F5DA7C !important;
 		text-transform: uppercase;
 		border-radius: 4px;
 		border: 0;
@@ -1823,7 +1823,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #fd887a;
+			background: #7700D7;
 		}
 
 		input[type="button"]:active,
@@ -1839,7 +1839,7 @@ input, select, textarea {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #878787;
+			background: #00BD75;
 		}
 
 			input[type="button"].alt:hover,
@@ -1847,7 +1847,7 @@ input, select, textarea {
 			input[type="reset"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background: #979797;
+				background: #7700D7;
 			}
 
 			input[type="button"].alt:active,
@@ -1855,7 +1855,7 @@ input, select, textarea {
 			input[type="reset"].alt:active,
 			button.alt:active,
 			.button.alt:active {
-				background: #878787;
+				background: #00BD75;
 			}
 
 /* Box */
@@ -1865,8 +1865,8 @@ input, select, textarea {
 	}
 
 	.box.excerpt .date {
-		background: #878787;
-		color: #F7F8C9;
+		background: #F5DA7C;
+		color: #00BD75;
 		font-weight: 400;
 		text-transform: uppercase;
 		border-radius: 4px;
@@ -1927,14 +1927,14 @@ input, select, textarea {
 	#header {
 		position: relative;
 		position: relative;
-		background: #F7F8C9;
+		background: #00BD75;
 		text-align: center;
 	}
 
 		#header > .container {
 			padding: 14em 0 7em 0;
-			border-bottom: solid 2px #e5e5e5;
-			box-shadow: inset 0px -8px 0px 0px #F7F8C9, inset 0px -10px 0px 0px #e5e5e5;
+			border-bottom: solid 2px #F5DA7C;
+			box-shadow: inset 0px -8px 0px 0px #F5DA7C, inset 0px -10px 0px 0px #F5DA7C;
 		}
 
 		#header h1 {
@@ -1953,7 +1953,7 @@ input, select, textarea {
 		#header p {
 			text-transform: uppercase;
 			font-weight: 400;
-			color: #888;
+			color: #F5DA7C;
 			margin: 2.5em 0 0 0;
 			font-size: 0.85em;
 			letter-spacing: 3px;
@@ -1984,15 +1984,15 @@ input, select, textarea {
 				text-decoration: none;
 				text-transform: uppercase;
 				font-weight: 400;
-				color: #F7F8C9;
+				color: #F5DA7C;
 				outline: 0;
 				display: block;
 			}
 
 				#nav > ul > li > a:before {
 					display: inline-block;
-					background: #878787;
-					color: #e4e4e4;
+					background: #F5DA7C;
+					color: #F5DA7C;
 					width: 2.25em;
 					font-size: 0.8em;
 					height: 2.25em;
@@ -2024,8 +2024,8 @@ input, select, textarea {
 
 			#nav > ul > li.active > a:before,
 			#nav > ul > li:hover > a:before {
-				background: #00BD75;
-				color: #F7F8C9;
+				background: #7700D7;
+				color: #F5DA7C;
 			}
 
 			#nav > ul > li.active > a > span,
@@ -2035,9 +2035,9 @@ input, select, textarea {
 
 	.dropotron {
 		text-align: left;
-		border: solid 1px #e5e5e5;
+		border: solid 1px #F5DA7C;
 		border-radius: 4px;
-		background: #F7F8C9;
+		background: #F5DA7C;
 		background: rgba(255, 255, 255, 0.965);
 		box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
 		padding: 0.75em 0 0.5em 0;
@@ -2060,7 +2060,7 @@ input, select, textarea {
 				top: calc(-0.75em + 1px);
 				border-left: solid 0.75em rgba(255, 255, 255, 0);
 				border-right: solid 0.75em rgba(255, 255, 255, 0);
-				border-bottom: solid 0.75em #F7F8C9;
+				border-bottom: solid 0.75em #F5DA7C;
 			}
 
 			.dropotron.level-0:before {
@@ -2078,7 +2078,7 @@ input, select, textarea {
 			display: block;
 			padding: 0.3em 1em 0.3em 1em;
 			border: 0;
-			border-top: solid 1px #F7F8C9;
+			border-top: solid 1px #F5DA7C;
 			outline: 0;
 		}
 
@@ -2097,7 +2097,7 @@ input, select, textarea {
 				-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 				-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 				transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-				color: #00BD75;
+				color: #7700D7;
 			}
 
 /* Features */
@@ -2105,7 +2105,7 @@ input, select, textarea {
 	#features {
 		position: relative;
 		overflow: hidden;
-		background: #F7F8C9;
+		background: #F5DA7C;
 		text-align: center;
 		padding: 6em 0;
 	}
@@ -2123,12 +2123,12 @@ input, select, textarea {
 	#banner {
 		position: relative;
 		overflow: hidden;
-		background: #F7F8C9;
-		color: #F7F8C9;
+		background: #F5DA7C;
+		color: #F5DA7C;
 		text-align: center;
-		border-top: solid 2px #e5e5e5;
-		border-bottom: solid 2px #e5e5e5;
-		box-shadow: inset 0px -8px 0px 0px #F7F8C9, inset 0px 8px 0px 0px #F7F8C9;
+		border-top: solid 2px #F5DA7C;
+		border-bottom: solid 2px #F5DA7C;
+		box-shadow: inset 0px -8px 0px 0px #F5DA7C, inset 0px 8px 0px 0px #F5DA7C;
 		position: relative;
 		text-transform: uppercase;
 		background: url("../../images/banner.jpg");
@@ -2182,7 +2182,7 @@ input, select, textarea {
 	#main {
 		position: relative;
 		overflow: hidden;
-		background: #F7F8C9;
+		background: #F5DA7C;
 		padding: 6em 0;
 	}
 
@@ -2190,8 +2190,8 @@ input, select, textarea {
 
 	#content > section,
 	#content > article {
-		border-top: solid 2px #e5e5e5;
-		box-shadow: inset 0px 8px 0px 0px #F7F8C9, inset 0px 10px 0px 0px #e5e5e5;
+		border-top: solid 2px #F5DA7C;
+		box-shadow: inset 0px 8px 0px 0px #F5DA7C, inset 0px 10px 0px 0px #F5DA7C;
 		margin: 5em 0 0 0;
 		padding: 5em 0 0 0;
 	}
@@ -2208,8 +2208,8 @@ input, select, textarea {
 
 	#sidebar > section,
 	#sidebar > article {
-		border-top: solid 2px #e5e5e5;
-		box-shadow: inset 0px 8px 0px 0px #F7F8C9, inset 0px 10px 0px 0px #e5e5e5;
+		border-top: solid 2px #F5DA7C;
+		box-shadow: inset 0px 8px 0px 0px #F5DA7C, inset 0px 10px 0px 0px #F5DA7C;
 		margin: 5em 0 0 0;
 		padding: 5em 0 0 0;
 	}
@@ -2227,8 +2227,8 @@ input, select, textarea {
 	#footer {
 		position: relative;
 		overflow: hidden;
-		border-top: solid 2px #e5e5e5;
-		background: #F7F8C9;
+		border-top: solid 2px #F5DA7C;
+		background: #F5DA7C;
 		padding: 6em 0 8em 0;
 	}
 
@@ -2237,7 +2237,7 @@ input, select, textarea {
 		#footer form input[type="password"],
 		#footer form select,
 		#footer form textarea {
-			background: #f7f7f7;
+			background: #F5DA7C;
 		}
 
 			#footer form input[type="text"]:focus,
@@ -2245,7 +2245,7 @@ input, select, textarea {
 			#footer form input[type="password"]:focus,
 			#footer form select:focus,
 			#footer form textarea:focus {
-				background: #F7F8C9;
+				background: #F5DA7C;
 			}
 
 		#footer h2 {
@@ -2255,7 +2255,7 @@ input, select, textarea {
 /* Copyright */
 
 	#copyright {
-		border-top: solid 2px #e5e5e5;
+		border-top: solid 2px #F5DA7C;
 		text-align: center;
 		margin-top: 6em;
 		padding-top: 4em;
@@ -2505,7 +2505,7 @@ input, select, textarea {
 
 					#navPanel .link.depth-0 {
 						font-weight: 600;
-						color: #F7F8C9;
+						color: #F5DA7C;
 					}
 
 				#navPanel .indent-1 {
@@ -2534,7 +2534,7 @@ input, select, textarea {
 				}
 
 				#navPanel .depth-0 {
-					color: #F7F8C9;
+					color: #F5DA7C;
 				}
 
 			body.navPanel-visible #page-wrapper {
