@@ -89,7 +89,7 @@ input, select, textarea {
 	position: absolute;
 	top: -6px;
 	right: -6px;
-	background: #3a7d44;
+	background: #00BD75;
 	color: #fff;
 	font-size: 12px;
 	padding: 2px 6px;
@@ -131,7 +131,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 600;
 		text-transform: uppercase;
-		color: #649e66;
+		color: #00BD75;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -172,17 +172,17 @@ input, select, textarea {
 		}
 
 		a:hover {
-			color: #649e66;
+			color: #00BD75;
 			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
 			a:hover strong {
-				color: #649e66;
+				color: #00BD75;
 			}
 
 	strong, b {
 		font-weight: 600;
-		color: #649e66;
+		color: #00BD75;
 	}
 
 	em, i {
