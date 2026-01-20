@@ -224,6 +224,30 @@ input, select, textarea {
 	br.clear {
 		clear: both;
 	}
+/* Hamburger toggle */
+.nav-toggle {
+	display: none;
+	text-decoration: none;
+	font-size: 1.25em;
+	color: var(--retro-green);
+	cursor: pointer;
+}
+
+/* Mobile only */
+@media screen and (max-width: 980px) {
+	.nav-toggle {
+		display: block;
+		margin-top: 1em;
+	}
+
+	#nav {
+		display: none;
+	}
+
+	#nav.visible {
+		display: block;
+	}
+}
 
 /* Container */
 
