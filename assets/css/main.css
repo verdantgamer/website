@@ -123,7 +123,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
-		color: #777;
+		color: #F7F8C9;
 		line-height: 1.65em;
 		font-size: 15pt;
 	}
@@ -159,9 +159,9 @@ input, select, textarea {
 		-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-		color: #666;
+		color: #F7F8C9;
 		text-decoration: none;
-		border-bottom: solid 1px #ddd;
+		border-bottom: solid 1px #DD367C;
 	}
 
 		a strong {
@@ -203,11 +203,11 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #ddd;
+		border-top: solid 1px #DD367C;
 	}
 
 	blockquote {
-		border-left: solid 0.5em #ddd;
+		border-left: solid 0.5em #DD367C;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
@@ -1984,7 +1984,7 @@ input, select, textarea {
 				text-decoration: none;
 				text-transform: uppercase;
 				font-weight: 400;
-				color: #777;
+				color: #F7F8C9;
 				outline: 0;
 				display: block;
 			}
@@ -2490,7 +2490,7 @@ input, select, textarea {
 
 				#navPanel .link {
 					display: block;
-					color: #ddd;
+					color: #DD367C;
 					text-decoration: none;
 					height: 44px;
 					line-height: 44px;
