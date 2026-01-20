@@ -1588,7 +1588,7 @@ input, select, textarea {
 
 		ul.links li {
 			display: inline;
-			border-left: solid 1px #d0d0d0;
+			border-left: solid 1px #F5DA7C;
 			padding-left: 1em;
 			margin: 0 0 0 1em;
 		}
@@ -1626,7 +1626,7 @@ input, select, textarea {
 	}
 
 		ul.divided li {
-			border-top: solid 2px #e5e5e5;
+			border-top: solid 2px #F5DA7C;
 			padding-left: 0;
 			margin: 2.5em 0 0 0;
 			padding: 2.5em 0 0 0;
@@ -1657,8 +1657,8 @@ input, select, textarea {
 				top: 2.6em;
 				display: block;
 				font-size: 0.8em;
-				background: #649e66;
-				color: #649e66;
+				background: #00BD75;
+				color: #00BD75;
 				width: 2em;
 				height: 2em;
 				border-radius: 2em;
@@ -1680,7 +1680,7 @@ input, select, textarea {
 	form label {
 		font-weight: 600;
 		text-transform: uppercase;
-		color: #649e66;
+		color: #00BD75;
 		display: block;
 		margin: 0 0 1em 0;
 	}
@@ -1697,7 +1697,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		display: block;
 		border: 0;
-		background: #649e66;
+		background: #00BD75;
 		width: 100%;
 		box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
@@ -1745,7 +1745,7 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border-top: solid 1px #649e66;
+			border-top: solid 1px #00BD75;
 		}
 
 			table tbody tr:first-child {
@@ -1763,7 +1763,7 @@ input, select, textarea {
 		}
 
 		table thead {
-			background: #649e66;
+			background: #00BD75;
 			color: #fff;
 			font-weight: 400;
 			text-transform: uppercase;
@@ -1792,7 +1792,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		background: #649e66;
+		background: #00BD75;
 		color: #fff !important;
 		text-transform: uppercase;
 		border-radius: 4px;
@@ -1831,7 +1831,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background: #649e66;
+			background: #00BD75;
 		}
 
 		input[type="button"].alt,
@@ -1940,7 +1940,7 @@ input, select, textarea {
 		#header h1 {
 			font-family: 'Arvo';
 			font-weight: 700;
-			color: #649e66;
+			color: #00BD75;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 			font-size: 3em;
 			letter-spacing: 13px;
@@ -2024,7 +2024,7 @@ input, select, textarea {
 
 			#nav > ul > li.active > a:before,
 			#nav > ul > li:hover > a:before {
-				background: #649e66;
+				background: #00BD75;
 				color: #fff;
 			}
 
@@ -2097,7 +2097,7 @@ input, select, textarea {
 				-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 				-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 				transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-				color: #649e66;
+				color: #00BD75;
 			}
 
 /* Features */
