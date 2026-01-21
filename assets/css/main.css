@@ -172,17 +172,17 @@ input, select, textarea {
 		}
 
 		a:hover {
-			color: #00BD75;
+			color: #F6A90F;
 			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
 			a:hover strong {
-				color: #00BD75;
+				color: #F6A90F;
 			}
 
 	strong, b {
 		font-weight: 600;
-		color: #00BD75;
+		color: #F6A90F;
 	}
 
 	em, i {
@@ -1681,8 +1681,8 @@ input, select, textarea {
 				top: 2.6em;
 				display: block;
 				font-size: 0.8em;
-				background: #00BD75;
-				color: #00BD75;
+				background: #F6A90F;
+				color: #F6A90F;
 				width: 2em;
 				height: 2em;
 				border-radius: 2em;
@@ -1704,7 +1704,7 @@ input, select, textarea {
 	form label {
 		font-weight: 600;
 		text-transform: uppercase;
-		color: #00BD75;
+		color: #F6A90F;
 		display: block;
 		margin: 0 0 1em 0;
 	}
@@ -1721,7 +1721,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		display: block;
 		border: 0;
-		background: #00BD75;
+		background: #F6A90F;
 		width: 100%;
 		box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
@@ -1769,7 +1769,7 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border-top: solid 1px #00BD75;
+			border-top: solid 1px #F6A90F;
 		}
 
 			table tbody tr:first-child {
@@ -1787,7 +1787,7 @@ input, select, textarea {
 		}
 
 		table thead {
-			background: #00BD75;
+			background: #F6A90F;
 			color: #18786C;
 			font-weight: 400;
 			text-transform: uppercase;
@@ -1816,7 +1816,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		background: #00BD75;
+		background: #F6A90F;
 		color: #18786C !important;
 		text-transform: uppercase;
 		border-radius: 4px;
@@ -1855,7 +1855,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background: #00BD75;
+			background: #F6A90F;
 		}
 
 		input[type="button"].alt,
@@ -1863,7 +1863,7 @@ input, select, textarea {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #00BD75;
+			background: #F6A90F;
 		}
 
 			input[type="button"].alt:hover,
@@ -1879,7 +1879,7 @@ input, select, textarea {
 			input[type="reset"].alt:active,
 			button.alt:active,
 			.button.alt:active {
-				background: #00BD75;
+				background: #F6A90F;
 			}
 
 /* Box */
@@ -1890,7 +1890,7 @@ input, select, textarea {
 
 	.box.excerpt .date {
 		background: #18786C;
-		color: #00BD75;
+		color: #F6A90F;
 		font-weight: 400;
 		text-transform: uppercase;
 		border-radius: 4px;
@@ -1951,7 +1951,7 @@ input, select, textarea {
 	#header {
 		position: relative;
 		position: relative;
-		background: #00BD75;
+		background: #F6A90F;
 		text-align: center;
 	}
 
@@ -1964,7 +1964,7 @@ input, select, textarea {
 		#header h1 {
 			font-family: 'Arvo';
 			font-weight: 700;
-			color: #00BD75;
+			color: #F6A90F;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 			font-size: 3em;
 			letter-spacing: 13px;
