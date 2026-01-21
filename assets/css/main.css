@@ -1977,7 +1977,7 @@ input, select, textarea {
 		#header p {
 			text-transform: uppercase;
 			font-weight: 400;
-			color: #629E70;
+			color: #2C3E5E;
 			margin: 2.5em 0 0 0;
 			font-size: 0.85em;
 			letter-spacing: 3px;
@@ -2008,14 +2008,14 @@ input, select, textarea {
 				text-decoration: none;
 				text-transform: uppercase;
 				font-weight: 400;
-				color: #629E70;
+				color: #2C3E5E;
 				outline: 0;
 				display: block;
 			}
 
 				#nav > ul > li > a:before {
 					display: inline-block;
-					background: #629E70;
+					background: #2C3E5E;
 					color: #629E70;
 					width: 2.25em;
 					font-size: 0.8em;
@@ -2048,7 +2048,7 @@ input, select, textarea {
 
 			#nav > ul > li.active > a:before,
 			#nav > ul > li:hover > a:before {
-				background: #7700D7;
+				background: #18786C;
 				color: #629E70;
 			}
 
