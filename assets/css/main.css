@@ -90,7 +90,7 @@ input, select, textarea {
 	top: -6px;
 	right: -6px;
 	background: #629E70;
-	color: #18786C;
+	color: #629E70;
 	font-size: 12px;
 	padding: 2px 6px;
 	border-radius: 50%;
@@ -106,7 +106,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #18786C;
+		background: #629E70;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -159,7 +159,7 @@ input, select, textarea {
 		-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-		color: #18786C;
+		color: #629E70;
 		text-decoration: none;
 		border-bottom: solid 1px #DD367C;
 	}
@@ -1612,7 +1612,7 @@ input, select, textarea {
 
 		ul.links li {
 			display: inline;
-			border-left: solid 1px #18786C;
+			border-left: solid 1px #629E70;
 			padding-left: 1em;
 			margin: 0 0 0 1em;
 		}
@@ -1734,7 +1734,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			background: #18786C;
+			background: #629E70;
 		}
 
 	form textarea {
@@ -1798,8 +1798,8 @@ input, select, textarea {
 		}
 
 		table tfoot {
-			background: #18786C;
-			border-top: solid 2px #18786C;
+			background: #629E70;
+			border-top: solid 2px #629E70;
 		}
 
 /* Button */
@@ -1817,7 +1817,7 @@ input, select, textarea {
 		position: relative;
 		display: inline-block;
 		background: #F6A90F;
-		color: #18786C !important;
+		color: #629E70 !important;
 		text-transform: uppercase;
 		border-radius: 4px;
 		border: 0;
@@ -1889,7 +1889,7 @@ input, select, textarea {
 	}
 
 	.box.excerpt .date {
-		background: #18786C;
+		background: #629E70;
 		color: #F6A90F;
 		font-weight: 400;
 		text-transform: uppercase;
@@ -1957,8 +1957,8 @@ input, select, textarea {
 
 		#header > .container {
 			padding: 14em 0 7em 0;
-			border-bottom: solid 2px #18786C;
-			box-shadow: inset 0px -8px 0px 0px #18786C, inset 0px -10px 0px 0px #18786C;
+			border-bottom: solid 2px #629E70;
+			box-shadow: inset 0px -8px 0px 0px #629E70, inset 0px -10px 0px 0px #629E70;
 		}
 
 		#header h1 {
@@ -1977,7 +1977,7 @@ input, select, textarea {
 		#header p {
 			text-transform: uppercase;
 			font-weight: 400;
-			color: #18786C;
+			color: #629E70;
 			margin: 2.5em 0 0 0;
 			font-size: 0.85em;
 			letter-spacing: 3px;
@@ -2008,15 +2008,15 @@ input, select, textarea {
 				text-decoration: none;
 				text-transform: uppercase;
 				font-weight: 400;
-				color: #18786C;
+				color: #629E70;
 				outline: 0;
 				display: block;
 			}
 
 				#nav > ul > li > a:before {
 					display: inline-block;
-					background: #18786C;
-					color: #18786C;
+					background: #629E70;
+					color: #629E70;
 					width: 2.25em;
 					font-size: 0.8em;
 					height: 2.25em;
@@ -2049,7 +2049,7 @@ input, select, textarea {
 			#nav > ul > li.active > a:before,
 			#nav > ul > li:hover > a:before {
 				background: #7700D7;
-				color: #18786C;
+				color: #629E70;
 			}
 
 			#nav > ul > li.active > a > span,
@@ -2059,9 +2059,9 @@ input, select, textarea {
 
 	.dropotron {
 		text-align: left;
-		border: solid 1px #18786C;
+		border: solid 1px #629E70;
 		border-radius: 4px;
-		background: #18786C;
+		background: #629E70;
 		background: rgba(255, 255, 255, 0.965);
 		box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
 		padding: 0.75em 0 0.5em 0;
@@ -2084,7 +2084,7 @@ input, select, textarea {
 				top: calc(-0.75em + 1px);
 				border-left: solid 0.75em rgba(255, 255, 255, 0);
 				border-right: solid 0.75em rgba(255, 255, 255, 0);
-				border-bottom: solid 0.75em #18786C;
+				border-bottom: solid 0.75em #629E70;
 			}
 
 			.dropotron.level-0:before {
@@ -2102,7 +2102,7 @@ input, select, textarea {
 			display: block;
 			padding: 0.3em 1em 0.3em 1em;
 			border: 0;
-			border-top: solid 1px #18786C;
+			border-top: solid 1px #629E70;
 			outline: 0;
 		}
 
@@ -2129,7 +2129,7 @@ input, select, textarea {
 	#features {
 		position: relative;
 		overflow: hidden;
-		background: #18786C;
+		background: #629E70;
 		text-align: center;
 		padding: 6em 0;
 	}
@@ -2147,12 +2147,12 @@ input, select, textarea {
 	#banner {
 		position: relative;
 		overflow: hidden;
-		background: #18786C;
-		color: #18786C;
+		background: #629E70;
+		color: #629E70;
 		text-align: center;
-		border-top: solid 2px #18786C;
-		border-bottom: solid 2px #18786C;
-		box-shadow: inset 0px -8px 0px 0px #18786C, inset 0px 8px 0px 0px #18786C;
+		border-top: solid 2px #629E70;
+		border-bottom: solid 2px #629E70;
+		box-shadow: inset 0px -8px 0px 0px #629E70, inset 0px 8px 0px 0px #629E70;
 		position: relative;
 		text-transform: uppercase;
 		background: url("../../images/banner.jpg");
@@ -2206,7 +2206,7 @@ input, select, textarea {
 	#main {
 		position: relative;
 		overflow: hidden;
-		background: #18786C;
+		background: #629E70;
 		padding: 6em 0;
 	}
 
@@ -2214,8 +2214,8 @@ input, select, textarea {
 
 	#content > section,
 	#content > article {
-		border-top: solid 2px #18786C;
-		box-shadow: inset 0px 8px 0px 0px #18786C, inset 0px 10px 0px 0px #18786C;
+		border-top: solid 2px #629E70;
+		box-shadow: inset 0px 8px 0px 0px #629E70, inset 0px 10px 0px 0px #629E70;
 		margin: 5em 0 0 0;
 		padding: 5em 0 0 0;
 	}
@@ -2232,8 +2232,8 @@ input, select, textarea {
 
 	#sidebar > section,
 	#sidebar > article {
-		border-top: solid 2px #18786C;
-		box-shadow: inset 0px 8px 0px 0px #18786C, inset 0px 10px 0px 0px #18786C;
+		border-top: solid 2px #629E70;
+		box-shadow: inset 0px 8px 0px 0px #629E70, inset 0px 10px 0px 0px #629E70;
 		margin: 5em 0 0 0;
 		padding: 5em 0 0 0;
 	}
@@ -2251,8 +2251,8 @@ input, select, textarea {
 	#footer {
 		position: relative;
 		overflow: hidden;
-		border-top: solid 2px #18786C;
-		background: #18786C;
+		border-top: solid 2px #629E70;
+		background: #629E70;
 		padding: 6em 0 8em 0;
 	}
 
@@ -2261,7 +2261,7 @@ input, select, textarea {
 		#footer form input[type="password"],
 		#footer form select,
 		#footer form textarea {
-			background: #18786C;
+			background: #629E70;
 		}
 
 			#footer form input[type="text"]:focus,
@@ -2269,7 +2269,7 @@ input, select, textarea {
 			#footer form input[type="password"]:focus,
 			#footer form select:focus,
 			#footer form textarea:focus {
-				background: #18786C;
+				background: #629E70;
 			}
 
 		#footer h2 {
@@ -2279,7 +2279,7 @@ input, select, textarea {
 /* Copyright */
 
 	#copyright {
-		border-top: solid 2px #18786C;
+		border-top: solid 2px #629E70;
 		text-align: center;
 		margin-top: 6em;
 		padding-top: 4em;
@@ -2529,7 +2529,7 @@ input, select, textarea {
 
 					#navPanel .link.depth-0 {
 						font-weight: 600;
-						color: #18786C;
+						color: #629E70;
 					}
 
 				#navPanel .indent-1 {
@@ -2558,7 +2558,7 @@ input, select, textarea {
 				}
 
 				#navPanel .depth-0 {
-					color: #18786C;
+					color: #629E70;
 				}
 
 			body.navPanel-visible #page-wrapper {
