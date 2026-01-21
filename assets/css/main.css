@@ -89,7 +89,7 @@ input, select, textarea {
 	position: absolute;
 	top: -6px;
 	right: -6px;
-	background: #00BD75;
+	background: #629E70;
 	color: #18786C;
 	font-size: 12px;
 	padding: 2px 6px;
@@ -131,7 +131,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 600;
 		text-transform: uppercase;
-		color: #00BD75;
+		color: #629E70;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
