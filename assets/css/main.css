@@ -1847,7 +1847,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #7700D7;
+			background: #2C3E5E;
 		}
 
 		input[type="button"]:active,
@@ -1871,7 +1871,7 @@ input, select, textarea {
 			input[type="reset"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background: #7700D7;
+				background: #2C3E5E;
 			}
 
 			input[type="button"].alt:active,
@@ -1951,7 +1951,7 @@ input, select, textarea {
 	#header {
 		position: relative;
 		position: relative;
-		background: #F6A90F;
+		background: #8C3E1F;
 		text-align: center;
 	}
 
@@ -1964,7 +1964,7 @@ input, select, textarea {
 		#header h1 {
 			font-family: 'Arvo';
 			font-weight: 700;
-			color: #F6A90F;
+			color: #8C3E1F;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 			font-size: 3em;
 			letter-spacing: 13px;
