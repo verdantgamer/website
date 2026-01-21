@@ -1533,7 +1533,7 @@ input, select, textarea {
 		-ms-transition: opacity 0.25s ease-in-out;
 		transition: opacity 0.25s ease-in-out;
 		display: inline-block;
-		border: solid 6px #ebebeb !important;
+		border: solid 6px #F6A90F !important;
 	}
 
 		.image:hover {
@@ -1650,7 +1650,7 @@ input, select, textarea {
 	}
 
 		ul.divided li {
-			border-top: solid 2px #18786C;
+			border-top: solid 2px #8C3E1F;
 			padding-left: 0;
 			margin: 2.5em 0 0 0;
 			padding: 2.5em 0 0 0;
@@ -1788,7 +1788,7 @@ input, select, textarea {
 
 		table thead {
 			background: #F6A90F;
-			color: #18786C;
+			color: #BF7524;
 			font-weight: 400;
 			text-transform: uppercase;
 			border: 0;
