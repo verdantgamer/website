@@ -123,7 +123,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
-		color: #8C3E1F;
+		color: #C97A5A;
 		line-height: 1.65em;
 		font-size: 15pt;
 	}
@@ -1650,7 +1650,7 @@ input, select, textarea {
 	}
 
 		ul.divided li {
-			border-top: solid 2px #8C3E1F;
+			border-top: solid 2px #C97A5A;
 			padding-left: 0;
 			margin: 2.5em 0 0 0;
 			padding: 2.5em 0 0 0;
@@ -1951,7 +1951,7 @@ input, select, textarea {
 	#header {
 		position: relative;
 		position: relative;
-		background: #8C3E1F;
+		background: #C97A5A;
 		text-align: center;
 	}
 
