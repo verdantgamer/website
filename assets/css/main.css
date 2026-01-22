@@ -161,7 +161,7 @@ input, select, textarea {
 		transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		color: #F5F1E8;
 		text-decoration: none;
-		border-bottom: solid 1px #DD367C;
+		border-bottom: solid 1px #D6B45A;
 	}
 
 		a strong {
@@ -203,11 +203,11 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #DD367C;
+		border-top: solid 1px #D6B45A;
 	}
 
 	blockquote {
-		border-left: solid 0.5em #DD367C;
+		border-left: solid 0.5em #D6B45A;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
@@ -2514,7 +2514,7 @@ input, select, textarea {
 
 				#navPanel .link {
 					display: block;
-					color: #DD367C;
+					color: #D6B45A;
 					text-decoration: none;
 					height: 44px;
 					line-height: 44px;
