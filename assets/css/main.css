@@ -89,8 +89,8 @@ input, select, textarea {
 	position: absolute;
 	top: -6px;
 	right: -6px;
-	background: #8FBFA3;
-	color: #8FBFA3;
+	background: #2F3E34;
+	color: #2F3E34;
 	font-size: 12px;
 	padding: 2px 6px;
 	border-radius: 50%;
@@ -106,7 +106,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #8FBFA3;
+		background: #2F3E34;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -131,7 +131,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 600;
 		text-transform: uppercase;
-		color: #2C3E5E;
+		color: #F5F1E8;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -159,7 +159,7 @@ input, select, textarea {
 		-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-		color: #8FBFA3;
+		color: #2F3E34;
 		text-decoration: none;
 		border-bottom: solid 1px #DD367C;
 	}
@@ -172,17 +172,17 @@ input, select, textarea {
 		}
 
 		a:hover {
-			color: #F6A90F;
+			color: #D6B45A;
 			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
 			a:hover strong {
-				color: #F6A90F;
+				color: #D6B45A;
 			}
 
 	strong, b {
 		font-weight: 600;
-		color: #2C3E5E;
+		color: #F5F1E8;
 	}
 
 	em, i {
@@ -1533,7 +1533,7 @@ input, select, textarea {
 		-ms-transition: opacity 0.25s ease-in-out;
 		transition: opacity 0.25s ease-in-out;
 		display: inline-block;
-		border: solid 6px #F6A90F !important;
+		border: solid 6px #D6B45A !important;
 	}
 
 		.image:hover {
@@ -1612,7 +1612,7 @@ input, select, textarea {
 
 		ul.links li {
 			display: inline;
-			border-left: solid 1px #8FBFA3;
+			border-left: solid 1px #2F3E34;
 			padding-left: 1em;
 			margin: 0 0 0 1em;
 		}
@@ -1681,8 +1681,8 @@ input, select, textarea {
 				top: 2.6em;
 				display: block;
 				font-size: 0.8em;
-				background: #F6A90F;
-				color: #F6A90F;
+				background: #D6B45A;
+				color: #D6B45A;
 				width: 2em;
 				height: 2em;
 				border-radius: 2em;
@@ -1704,7 +1704,7 @@ input, select, textarea {
 	form label {
 		font-weight: 600;
 		text-transform: uppercase;
-		color: #F6A90F;
+		color: #D6B45A;
 		display: block;
 		margin: 0 0 1em 0;
 	}
@@ -1721,7 +1721,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		display: block;
 		border: 0;
-		background: #F6A90F;
+		background: #D6B45A;
 		width: 100%;
 		box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
@@ -1734,7 +1734,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			background: #8FBFA3;
+			background: #2F3E34;
 		}
 
 	form textarea {
@@ -1769,7 +1769,7 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border-top: solid 1px #F6A90F;
+			border-top: solid 1px #D6B45A;
 		}
 
 			table tbody tr:first-child {
@@ -1787,7 +1787,7 @@ input, select, textarea {
 		}
 
 		table thead {
-			background: #F6A90F;
+			background: #D6B45A;
 			color: #BF7524;
 			font-weight: 400;
 			text-transform: uppercase;
@@ -1798,8 +1798,8 @@ input, select, textarea {
 		}
 
 		table tfoot {
-			background: #8FBFA3;
-			border-top: solid 2px #8FBFA3;
+			background: #2F3E34;
+			border-top: solid 2px #2F3E34;
 		}
 
 /* Button */
@@ -1816,8 +1816,8 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		background: #F6A90F;
-		color: #8FBFA3 !important;
+		background: #D6B45A;
+		color: #2F3E34 !important;
 		text-transform: uppercase;
 		border-radius: 4px;
 		border: 0;
@@ -1847,7 +1847,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #2C3E5E;
+			background: #F5F1E8;
 		}
 
 		input[type="button"]:active,
@@ -1855,7 +1855,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background: #F6A90F;
+			background: #D6B45A;
 		}
 
 		input[type="button"].alt,
@@ -1863,7 +1863,7 @@ input, select, textarea {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #F6A90F;
+			background: #D6B45A;
 		}
 
 			input[type="button"].alt:hover,
@@ -1871,7 +1871,7 @@ input, select, textarea {
 			input[type="reset"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background: #2C3E5E;
+				background: #F5F1E8;
 			}
 
 			input[type="button"].alt:active,
@@ -1879,7 +1879,7 @@ input, select, textarea {
 			input[type="reset"].alt:active,
 			button.alt:active,
 			.button.alt:active {
-				background: #F6A90F;
+				background: #D6B45A;
 			}
 
 /* Box */
@@ -1889,8 +1889,8 @@ input, select, textarea {
 	}
 
 	.box.excerpt .date {
-		background: #8FBFA3;
-		color: #F6A90F;
+		background: #2F3E34;
+		color: #D6B45A;
 		font-weight: 400;
 		text-transform: uppercase;
 		border-radius: 4px;
@@ -1957,14 +1957,14 @@ input, select, textarea {
 
 		#header > .container {
 			padding: 14em 0 7em 0;
-			border-bottom: solid 2px #8FBFA3;
-			box-shadow: inset 0px -8px 0px 0px #8FBFA3, inset 0px -10px 0px 0px #8FBFA3;
+			border-bottom: solid 2px #2F3E34;
+			box-shadow: inset 0px -8px 0px 0px #2F3E34, inset 0px -10px 0px 0px #2F3E34;
 		}
 
 		#header h1 {
 			font-family: 'Arvo';
 			font-weight: 700;
-			color: #F6A90F;
+			color: #D6B45A;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 			font-size: 3em;
 			letter-spacing: 13px;
@@ -1977,7 +1977,7 @@ input, select, textarea {
 		#header p {
 			text-transform: uppercase;
 			font-weight: 400;
-			color: #2C3E5E;
+			color: #F5F1E8;
 			margin: 2.5em 0 0 0;
 			font-size: 0.85em;
 			letter-spacing: 3px;
@@ -2008,15 +2008,15 @@ input, select, textarea {
 				text-decoration: none;
 				text-transform: uppercase;
 				font-weight: 400;
-				color: #2C3E5E;
+				color: #F5F1E8;
 				outline: 0;
 				display: block;
 			}
 
 				#nav > ul > li > a:before {
 					display: inline-block;
-					background: #2C3E5E;
-					color: #8FBFA3;
+					background: #F5F1E8;
+					color: #2F3E34;
 					width: 2.25em;
 					font-size: 0.8em;
 					height: 2.25em;
@@ -2049,7 +2049,7 @@ input, select, textarea {
 			#nav > ul > li.active > a:before,
 			#nav > ul > li:hover > a:before {
 				background: #18786C;
-				color: #8FBFA3;
+				color: #2F3E34;
 			}
 
 			#nav > ul > li.active > a > span,
@@ -2059,9 +2059,9 @@ input, select, textarea {
 
 	.dropotron {
 		text-align: left;
-		border: solid 1px #8FBFA3;
+		border: solid 1px #2F3E34;
 		border-radius: 4px;
-		background: #8FBFA3;
+		background: #2F3E34;
 		background: rgba(255, 255, 255, 0.965);
 		box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
 		padding: 0.75em 0 0.5em 0;
@@ -2084,7 +2084,7 @@ input, select, textarea {
 				top: calc(-0.75em + 1px);
 				border-left: solid 0.75em rgba(255, 255, 255, 0);
 				border-right: solid 0.75em rgba(255, 255, 255, 0);
-				border-bottom: solid 0.75em #8FBFA3;
+				border-bottom: solid 0.75em #2F3E34;
 			}
 
 			.dropotron.level-0:before {
@@ -2102,7 +2102,7 @@ input, select, textarea {
 			display: block;
 			padding: 0.3em 1em 0.3em 1em;
 			border: 0;
-			border-top: solid 1px #8FBFA3;
+			border-top: solid 1px #2F3E34;
 			outline: 0;
 		}
 
@@ -2129,7 +2129,7 @@ input, select, textarea {
 	#features {
 		position: relative;
 		overflow: hidden;
-		background: #8FBFA3;
+		background: #2F3E34;
 		text-align: center;
 		padding: 6em 0;
 	}
@@ -2147,12 +2147,12 @@ input, select, textarea {
 	#banner {
 		position: relative;
 		overflow: hidden;
-		background: #8FBFA3;
-		color: #8FBFA3;
+		background: #2F3E34;
+		color: #2F3E34;
 		text-align: center;
-		border-top: solid 2px #8FBFA3;
-		border-bottom: solid 2px #8FBFA3;
-		box-shadow: inset 0px -8px 0px 0px #8FBFA3, inset 0px 8px 0px 0px #8FBFA3;
+		border-top: solid 2px #2F3E34;
+		border-bottom: solid 2px #2F3E34;
+		box-shadow: inset 0px -8px 0px 0px #2F3E34, inset 0px 8px 0px 0px #2F3E34;
 		position: relative;
 		text-transform: uppercase;
 		background: url("../../images/banner.jpg");
@@ -2206,7 +2206,7 @@ input, select, textarea {
 	#main {
 		position: relative;
 		overflow: hidden;
-		background: #8FBFA3;
+		background: #2F3E34;
 		padding: 6em 0;
 	}
 
@@ -2214,8 +2214,8 @@ input, select, textarea {
 
 	#content > section,
 	#content > article {
-		border-top: solid 2px #8FBFA3;
-		box-shadow: inset 0px 8px 0px 0px #8FBFA3, inset 0px 10px 0px 0px #8FBFA3;
+		border-top: solid 2px #2F3E34;
+		box-shadow: inset 0px 8px 0px 0px #2F3E34, inset 0px 10px 0px 0px #2F3E34;
 		margin: 5em 0 0 0;
 		padding: 5em 0 0 0;
 	}
@@ -2232,8 +2232,8 @@ input, select, textarea {
 
 	#sidebar > section,
 	#sidebar > article {
-		border-top: solid 2px #8FBFA3;
-		box-shadow: inset 0px 8px 0px 0px #8FBFA3, inset 0px 10px 0px 0px #8FBFA3;
+		border-top: solid 2px #2F3E34;
+		box-shadow: inset 0px 8px 0px 0px #2F3E34, inset 0px 10px 0px 0px #2F3E34;
 		margin: 5em 0 0 0;
 		padding: 5em 0 0 0;
 	}
@@ -2251,8 +2251,8 @@ input, select, textarea {
 	#footer {
 		position: relative;
 		overflow: hidden;
-		border-top: solid 2px #8FBFA3;
-		background: #8FBFA3;
+		border-top: solid 2px #2F3E34;
+		background: #2F3E34;
 		padding: 6em 0 8em 0;
 	}
 
@@ -2261,7 +2261,7 @@ input, select, textarea {
 		#footer form input[type="password"],
 		#footer form select,
 		#footer form textarea {
-			background: #8FBFA3;
+			background: #2F3E34;
 		}
 
 			#footer form input[type="text"]:focus,
@@ -2269,7 +2269,7 @@ input, select, textarea {
 			#footer form input[type="password"]:focus,
 			#footer form select:focus,
 			#footer form textarea:focus {
-				background: #8FBFA3;
+				background: #2F3E34;
 			}
 
 		#footer h2 {
@@ -2279,7 +2279,7 @@ input, select, textarea {
 /* Copyright */
 
 	#copyright {
-		border-top: solid 2px #8FBFA3;
+		border-top: solid 2px #2F3E34;
 		text-align: center;
 		margin-top: 6em;
 		padding-top: 4em;
@@ -2529,7 +2529,7 @@ input, select, textarea {
 
 					#navPanel .link.depth-0 {
 						font-weight: 600;
-						color: #8FBFA3;
+						color: #2F3E34;
 					}
 
 				#navPanel .indent-1 {
@@ -2558,7 +2558,7 @@ input, select, textarea {
 				}
 
 				#navPanel .depth-0 {
-					color: #8FBFA3;
+					color: #2F3E34;
 				}
 
 			body.navPanel-visible #page-wrapper {
