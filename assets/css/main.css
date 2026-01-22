@@ -161,7 +161,7 @@ input, select, textarea {
 		transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		color: #F5F1E8;
 		text-decoration: none;
-		border-bottom: solid 1px #D6B45A;
+		border-bottom: solid 1px #F5F1E8;
 	}
 
 		a strong {
@@ -203,7 +203,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #D6B45A;
+		border-top: solid 1px #C97A5A;
 	}
 
 	blockquote {
@@ -1533,7 +1533,7 @@ input, select, textarea {
 		-ms-transition: opacity 0.25s ease-in-out;
 		transition: opacity 0.25s ease-in-out;
 		display: inline-block;
-		border: solid 6px #D6B45A !important;
+		border: solid 6px #C97A5A !important;
 	}
 
 		.image:hover {
