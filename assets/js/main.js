@@ -102,18 +102,23 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 });
+
+	const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartDiv = document.getElementById('cart');
+let total = 0;
+
+cart.forEach(item => {
+	const line = document.createElement('p');
+	line.textContent = `${item.name} x ${item.qty} - $${item.price * item.qty}`;
+	cartDiv.appendChild(line);
+	total += item.price * item.qty;
+});
+
+document.getElementById('total').textContent =
+	'Total: $' + total.toFixed(2);
+
 })(jQuery);
 
-/* Mobile hamburger toggle */
-document.addEventListener('DOMContentLoaded', function () {
-	var toggle = document.querySelector('.nav-toggle');
-	var nav = document.getElementById('nav');
 
-	if (toggle && nav) {
-		toggle.addEventListener('click', function (e) {
-			e.preventDefault();
-			nav.classList.toggle('visible');
-		});
-	}
-});
+
 
