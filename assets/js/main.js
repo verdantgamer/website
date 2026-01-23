@@ -90,6 +90,24 @@ function addToCart(item) {
 	localStorage.setItem('cart', JSON.stringify(cart));
 	alert(item.name + ' added to cart!');
 }
+	function getCart() {
+	return JSON.parse(localStorage.getItem('cart')) || [];
+}
+
+function updateCartCount() {
+	const cart = getCart();
+	let count = 0;
+
+	cart.forEach(item => {
+		count += item.qty;
+	});
+
+	const cartCount = document.getElementById('cart-count');
+	if (cartCount) {
+		cartCount.textContent = count;
+	}
+}
+
 /* Mobile hamburger toggle */
 document.addEventListener('DOMContentLoaded', function () {
 	var toggle = document.querySelector('.nav-toggle');
@@ -118,6 +136,7 @@ document.getElementById('total').textContent =
 	'Total: $' + total.toFixed(2);
 
 })(jQuery);
+
 
 
 
