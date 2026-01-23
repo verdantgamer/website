@@ -58,9 +58,8 @@
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
-const buttons = document.querySelectorAll('.add-to-cart');
+
 // Cart Functions
-document.addEventListener('DOMContentLoaded', () => {
 
 	const buttons = document.querySelectorAll('.add-to-cart');
 
@@ -163,6 +162,7 @@ function renderCart(cartDiv) {
 
 
 })(jQuery);
+
 
 
 
