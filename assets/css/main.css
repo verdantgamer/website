@@ -224,6 +224,33 @@ input, select, textarea {
 	br.clear {
 		clear: both;
 	}
+.shop-items {
+	width: 100%;
+}
+
+.item {
+	display: inline-block;
+	width: 280px;
+	margin: 1rem;
+	vertical-align: top;
+	text-align: center;
+}
+
+.item img {
+	max-width: 100%;
+	height: auto;
+}
+
+.price {
+	font-weight: bold;
+	margin: 0.5rem 0;
+}
+
+.add-to-cart {
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
 /* Hamburger toggle */
 .nav-toggle {
 	display: none;
