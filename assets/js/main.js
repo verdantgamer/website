@@ -59,7 +59,9 @@
 					visibleClass: 'navPanel-visible'
 				
 
-// Cart Functions
+	// -------------------------
+	// Cart Functions
+	// -------------------------
 
 	const buttons = document.querySelectorAll('.add-to-cart');
 
@@ -79,12 +81,71 @@
 
 	updateCartCount();
 
-	// Only run cart display code if we're on cart.html
 	const cartDiv = document.getElementById('cart');
 	if (cartDiv) {
 		renderCart(cartDiv);
 	}
-});
+	function getCart() {
+		return JSON.parse(localStorage.getItem('cart')) || [];
+	}
+
+	function addToCart(item) {
+		let cart = getCart();
+
+		const existing = cart.find(p => p.id === item.id);
+
+		if (existing) {
+			existing.qty += 1;
+		} else {
+			cart.push(item);
+		}
+
+		localStorage.setItem('cart', JSON.stringify(cart));
+		updateCartCount();
+	}
+
+	function showAddedFeedback(button) {
+		const originalText = button.textContent;
+
+		button.textContent = 'Added!';
+		button.disabled = true;
+
+		setTimeout(() => {
+			button.textContent = originalText;
+			button.disabled = false;
+		}, 1200);
+	}
+
+	function updateCartCount() {
+		const cart = getCart();
+		let count = 0;
+
+		cart.forEach(item => {
+			count += item.qty;
+		});
+
+		const cartCount = document.getElementById('cart-count');
+		if (cartCount) {
+			cartCount.textContent = count;
+		}
+	}
+
+	function renderCart(cartDiv) {
+		const cart = getCart();
+		let total = 0;
+
+		cart.forEach(item => {
+			const line = document.createElement('p');
+			line.textContent = `${item.name} x ${item.qty} - $${(item.price * item.qty).toFixed(2)}`;
+			cartDiv.appendChild(line);
+			total += item.price * item.qty;
+		});
+
+		const totalLine = document.createElement('p');
+		totalLine.textContent = 'Total: $' + total.toFixed(2);
+		cartDiv.appendChild(totalLine);
+	}
+
 
 
 /* Mobile hamburger toggle */
@@ -162,6 +223,7 @@ function renderCart(cartDiv) {
 
 
 })(jQuery);
+
 
 
 
