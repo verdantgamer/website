@@ -134,8 +134,12 @@ cart.forEach(item => {
 
 document.getElementById('total').textContent =
 	'Total: $' + total.toFixed(2);
+document.addEventListener('DOMContentLoaded', () => {
+	updateCartCount();
+});
 
 })(jQuery);
+
 
 
 
