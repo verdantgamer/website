@@ -73,8 +73,10 @@ buttons.forEach(button => {
 		};
 
 		addToCart(item);
+		showAddedFeedback(button);
 	});
 });
+
 
 function addToCart(item) {
 	let cart = getCart();
@@ -151,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 })(jQuery);
+
 
 
 
