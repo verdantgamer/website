@@ -88,7 +88,7 @@
 
 
 /* Mobile hamburger toggle */
-document.addEventListener('DOMContentLoaded', function () {
+
 	var toggle = document.querySelector('.nav-toggle');
 	var nav = document.getElementById('nav');
 
@@ -162,6 +162,7 @@ function renderCart(cartDiv) {
 
 
 })(jQuery);
+
 
 
 
