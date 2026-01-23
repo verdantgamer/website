@@ -1,7 +1,7 @@
 (function ($) {
 
 	// ----------------------------
-	// Page + Nav setup (unchanged)
+	// Page + Nav setup
 	// ----------------------------
 
 	const $window = $(window);
@@ -60,15 +60,14 @@
 	function updateCartCount() {
 		const cart = getCart();
 		let count = 0;
-
 		cart.forEach(item => count += item.qty);
 
-		const cartCount = document.getElementById('cart-count');
+		const cartCount = document.querySelector('.cart-count'); // matches your header
 		if (cartCount) cartCount.textContent = count;
 	}
 
 	function addToCart(item) {
-		let cart = getCart();
+		const cart = getCart();
 		const existing = cart.find(p => p.id === item.id);
 
 		if (existing) {
@@ -79,6 +78,20 @@
 
 		saveCart(cart);
 		updateCartCount();
+	}
+
+	function removeItem(index) {
+		const cart = getCart();
+		cart.splice(index, 1);
+		saveCart(cart);
+		updateCartCount();
+		renderCart(); // refresh cart page
+	}
+
+	function clearCart() {
+		localStorage.removeItem('cart');
+		updateCartCount();
+		renderCart(); // refresh cart page
 	}
 
 	function showAddedFeedback(button) {
@@ -92,72 +105,63 @@
 		}, 1200);
 	}
 
-	function renderCart(cartDiv) {
+	function renderCart() {
+		const cartDiv = document.getElementById('cart');
+		const totalEl = document.getElementById('cart-total');
+
+		if (!cartDiv || !totalEl) return; // not on cart page
+
 		const cart = getCart();
 		let total = 0;
 
 		cartDiv.innerHTML = '';
 
-		cart.forEach(item => {
-			const line = document.createElement('p');
-			line.textContent = `${item.name} x ${item.qty} — $${(item.price * item.qty).toFixed(2)}`;
-			cartDiv.appendChild(line);
+		if (cart.length === 0) {
+			cartDiv.innerHTML = '<p>Your cart is empty.</p>';
+			totalEl.innerHTML = '<strong>Total:</strong> $0';
+			return;
+		}
+
+		cart.forEach((item, index) => {
+			const p = document.createElement('p');
+			p.innerHTML = `${item.name} x ${item.qty} — $${(item.price * item.qty).toFixed(2)} <a href="#" onclick="removeItem(${index})">[remove]</a>`;
+			cartDiv.appendChild(p);
 			total += item.price * item.qty;
 		});
 
-		const totalLine = document.createElement('p');
-		totalLine.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
-		cartDiv.appendChild(totalLine);
+		totalEl.innerHTML = `<strong>Total:</strong> $${total.toFixed(2)}`;
 	}
 
-// ----------------------------
-// DOM READY (ONE PLACE)
-// ----------------------------
-document.addEventListener('DOMContentLoaded', function () {
+	// ----------------------------
+	// DOM READY
+	// ----------------------------
+	document.addEventListener('DOMContentLoaded', function () {
 
-    // Cart clicks via delegation
-    document.addEventListener('click', function(e) {
-        const button = e.target.closest('.add-to-cart');
-        if (!button) return;
+		// Event delegation for Add-to-Cart buttons
+		document.addEventListener('click', function(e) {
+			const button = e.target.closest('.add-to-cart');
+			if (!button) return;
 
-        const item = {
-            id: button.dataset.id,
-            name: button.dataset.name,
-            price: Number(button.dataset.price),
-            qty: 1
-        };
+			const item = {
+				id: button.dataset.id,
+				name: button.dataset.name,
+				price: Number(button.dataset.price),
+				qty: 1
+			};
 
-        addToCart(item);
-        showAddedFeedback(button);
-    });
+			addToCart(item);
+			showAddedFeedback(button);
+		});
 
-    // Update cart icon count on every page
-    updateCartCount();
+		// Expose remove/clear functions globally for inline links
+		window.removeItem = removeItem;
+		window.clearCart = clearCart;
 
-    // Only render cart on cart.html
-    const cartDiv = document.getElementById('cart');
-    if (cartDiv) {
-        renderCart(cartDiv);
-    }
-});
+		// Update cart count
+		updateCartCount();
 
+		// Render cart if on cart page
+		renderCart();
+	});
 
 })(jQuery);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
