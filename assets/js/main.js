@@ -110,39 +110,40 @@
 		cartDiv.appendChild(totalLine);
 	}
 
-	// ----------------------------
-	// DOM READY (ONE PLACE)
-	// ----------------------------
+// ----------------------------
+// DOM READY (ONE PLACE)
+// ----------------------------
+document.addEventListener('DOMContentLoaded', function () {
 
-	document.addEventListener('DOMContentLoaded', function () {
+    // Cart clicks via delegation
+    document.addEventListener('click', function(e) {
+        const button = e.target.closest('.add-to-cart');
+        if (!button) return;
 
-		// Add-to-cart buttons
-		document.querySelectorAll('.add-to-cart').forEach(button => {
-			button.addEventListener('click', function () {
+        const item = {
+            id: button.dataset.id,
+            name: button.dataset.name,
+            price: Number(button.dataset.price),
+            qty: 1
+        };
 
-				const item = {
-					id: this.dataset.id,
-					name: this.dataset.name,
-					price: Number(this.dataset.price),
-					qty: 1
-				};
+        addToCart(item);
+        showAddedFeedback(button);
+    });
 
-				addToCart(item);
-				showAddedFeedback(this);
-			});
-		});
+    // Update cart icon count on every page
+    updateCartCount();
 
-		// Update cart icon count on every page
-		updateCartCount();
+    // Only render cart on cart.html
+    const cartDiv = document.getElementById('cart');
+    if (cartDiv) {
+        renderCart(cartDiv);
+    }
+});
 
-		// Only render cart on cart.html
-		const cartDiv = document.getElementById('cart');
-		if (cartDiv) {
-			renderCart(cartDiv);
-		}
-	});
 
 })(jQuery);
+
 
 
 
