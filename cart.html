@@ -11,11 +11,29 @@
 <div id="wrapper">
 
 	<!-- Header -->
-	<header id="header">
-		<a href="index.html" class="logo">
-			<strong>Verdant</strong> Gamer
-		</a>
+	<section class="inner">
+	<header class="major">
+		<h1>Your Cart</h1>
 	</header>
+
+	<div id="cart"></div>
+
+	<hr />
+
+	<p id="cart-total"><strong>Total:</strong> $0</p>
+
+	<ul class="actions">
+		<li>
+			<a href="#" class="button primary" onclick="clearCart()">Clear Cart</a>
+		</li>
+		<li>
+			<a href="index.html" class="button">Continue Shopping</a>
+		</li>
+	</ul>
+
+	<p><em>Local pickup only. No shipping available.</em></p>
+</section>
+
 
 	<!-- Nav -->
 	<nav id="nav">
@@ -34,7 +52,7 @@
 				<h1>Your Cart</h1>
 			</header>
 
-			<div id="cart-items"></div>
+
 <div id="cart"></div>
 
 			<hr />
@@ -52,8 +70,8 @@
 
 			<p><em>Local pickup only. No shipping available.</em></p>
 		</section>
-		<section id="cart"></section>
-<p id="total"></p>
+		
+
 
 	</div>
 
@@ -72,56 +90,12 @@
 
 </div>
 
-<script src="assets/js/cart.js"></script>
-<script>
-	function renderCart() {
-		let cart = JSON.parse(localStorage.getItem('cart')) || [];
-		let container = document.getElementById('cart-items');
-		let total = 0;
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
-		container.innerHTML = '';
-
-		if (cart.length === 0) {
-			container.innerHTML = '<p>Your cart is empty.</p>';
-			document.getElementById('cart-total').innerHTML =
-				'<strong>Total:</strong> $0';
-			return;
-		}
-
-		cart.forEach(function(item, index) {
-			let p = document.createElement('p');
-			p.innerHTML =
-				item.name + ' — $' + item.price +
-				' <a href="#" onclick="removeItem(' + index + ')">[remove]</a>';
-			container.appendChild(p);
-			total += item.price;
-		});
-
-		document.getElementById('cart-total').innerHTML =
-			'<strong>Total:</strong> $' + total;
-	}
-
-	function removeItem(index) {
-		let cart = JSON.parse(localStorage.getItem('cart')) || [];
-		cart.splice(index, 1);
-		localStorage.setItem('cart', JSON.stringify(cart));
-		renderCart();
-		updateCartCount();
-	}
-
-	function clearCart() {
-		localStorage.removeItem('cart');
-		renderCart();
-		updateCartCount();
-	}
-
-	renderCart();
-</script>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
 
 </body>
 </html>
