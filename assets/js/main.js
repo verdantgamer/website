@@ -1,8 +1,5 @@
-/*
-	Strongly Typed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// Verdant Gamer Website main java script
+
 
 (function($) {
 
@@ -62,65 +59,34 @@
 					visibleClass: 'navPanel-visible'
 				});
 const buttons = document.querySelectorAll('.add-to-cart');
+// Cart Functions
+document.addEventListener('DOMContentLoaded', () => {
 
-buttons.forEach(button => {
-	button.addEventListener('click', () => {
-		const item = {
-			id: button.dataset.id,
-			name: button.dataset.name,
-			price: Number(button.dataset.price),
-			qty: 1
-		};
+	const buttons = document.querySelectorAll('.add-to-cart');
 
-		addToCart(item);
-		showAddedFeedback(button);
+	buttons.forEach(button => {
+		button.addEventListener('click', () => {
+			const item = {
+				id: button.dataset.id,
+				name: button.dataset.name,
+				price: Number(button.dataset.price),
+				qty: 1
+			};
+
+			addToCart(item);
+			showAddedFeedback(button);
+		});
 	});
+
+	updateCartCount();
+
+	// Only run cart display code if we're on cart.html
+	const cartDiv = document.getElementById('cart');
+	if (cartDiv) {
+		renderCart(cartDiv);
+	}
 });
 
-
-function addToCart(item) {
-	let cart = getCart();
-
-	const existing = cart.find(p => p.id === item.id);
-
-	if (existing) {
-		existing.qty += 1;
-	} else {
-		cart.push(item);
-	}
-
-	localStorage.setItem('cart', JSON.stringify(cart));
-	updateCartCount();
-}
-
-	function getCart() {
-	return JSON.parse(localStorage.getItem('cart')) || [];
-}
-function showAddedFeedback(button) {
-	const originalText = button.textContent;
-
-	button.textContent = 'Added!';
-	button.disabled = true;
-
-	setTimeout(() => {
-		button.textContent = originalText;
-		button.disabled = false;
-	}, 1200);
-}
-
-function updateCartCount() {
-	const cart = getCart();
-	let count = 0;
-
-	cart.forEach(item => {
-		count += item.qty;
-	});
-
-	const cartCount = document.getElementById('cart-count');
-	if (cartCount) {
-		cartCount.textContent = count;
-	}
-}
 
 /* Mobile hamburger toggle */
 document.addEventListener('DOMContentLoaded', function () {
@@ -135,24 +101,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
-	const cart = JSON.parse(localStorage.getItem('cart')) || [];
-const cartDiv = document.getElementById('cart');
-let total = 0;
 
-cart.forEach(item => {
-	const line = document.createElement('p');
-	line.textContent = `${item.name} x ${item.qty} - $${item.price * item.qty}`;
-	cartDiv.appendChild(line);
-	total += item.price * item.qty;
-});
-
-document.getElementById('total').textContent =
-	'Total: $' + total.toFixed(2);
-document.addEventListener('DOMContentLoaded', () => {
-	updateCartCount();
-});
 
 })(jQuery);
+
 
 
 
