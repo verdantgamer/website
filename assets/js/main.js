@@ -57,7 +57,7 @@
 					side: 'left',
 					target: $body,
 					visibleClass: 'navPanel-visible'
-				});
+				
 
 // Cart Functions
 
@@ -162,6 +162,7 @@ function renderCart(cartDiv) {
 
 
 })(jQuery);
+
 
 
 
