@@ -94,6 +94,17 @@ function addToCart(item) {
 	function getCart() {
 	return JSON.parse(localStorage.getItem('cart')) || [];
 }
+function showAddedFeedback(button) {
+	const originalText = button.textContent;
+
+	button.textContent = 'Added!';
+	button.disabled = true;
+
+	setTimeout(() => {
+		button.textContent = originalText;
+		button.disabled = false;
+	}, 1200);
+}
 
 function updateCartCount() {
 	const cart = getCart();
@@ -140,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 })(jQuery);
+
 
 
 
