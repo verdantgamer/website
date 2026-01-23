@@ -1,97 +1,74 @@
-// Verdant Gamer Website main java script
+(function ($) {
 
+	// ----------------------------
+	// Page + Nav setup (unchanged)
+	// ----------------------------
 
-(function($) {
+	const $window = $(window);
+	const $body = $('body');
 
-	var	$window = $(window),
-		$body = $('body');
-
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1680px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ null,      '736px'  ]
-		});
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Dropdowns.
-		$('#nav > ul').dropotron({
-			mode: 'fade',
-			noOpenerFade: true,
-			hoverDelay: 150,
-			hideDelay: 350
-		});
-
-	// Nav.
-
-		// Title Bar.
-			$(
-				'<div id="titleBar">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-				'</div>'
-			)
-				.appendTo($body);
-
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				
-
-	// -------------------------
-	// Cart Functions
-	// -------------------------
-
-	const buttons = document.querySelectorAll('.add-to-cart');
-
-	buttons.forEach(button => {
-		button.addEventListener('click', () => {
-			const item = {
-				id: button.dataset.id,
-				name: button.dataset.name,
-				price: Number(button.dataset.price),
-				qty: 1
-			};
-
-			addToCart(item);
-			showAddedFeedback(button);
-		});
+	$window.on('load', function () {
+		setTimeout(function () {
+			$body.removeClass('is-preload');
+		}, 100);
 	});
 
-	updateCartCount();
+	$('#nav > ul').dropotron({
+		mode: 'fade',
+		noOpenerFade: true,
+		hoverDelay: 150,
+		hideDelay: 350
+	});
 
-	const cartDiv = document.getElementById('cart');
-	if (cartDiv) {
-		renderCart(cartDiv);
-	}
+	$(
+		'<div id="titleBar">' +
+			'<a href="#navPanel" class="toggle"></a>' +
+		'</div>'
+	).appendTo($body);
+
+	$(
+		'<div id="navPanel">' +
+			'<nav>' +
+				$('#nav').navList() +
+			'</nav>' +
+		'</div>'
+	)
+	.appendTo($body)
+	.panel({
+		delay: 500,
+		hideOnClick: true,
+		hideOnSwipe: true,
+		resetScroll: true,
+		resetForms: true,
+		side: 'left',
+		target: $body,
+		visibleClass: 'navPanel-visible'
+	});
+
+	// ----------------------------
+	// CART LOGIC
+	// ----------------------------
+
 	function getCart() {
 		return JSON.parse(localStorage.getItem('cart')) || [];
 	}
 
+	function saveCart(cart) {
+		localStorage.setItem('cart', JSON.stringify(cart));
+	}
+
+	function updateCartCount() {
+		const cart = getCart();
+		let count = 0;
+
+		cart.forEach(item => count += item.qty);
+
+		const cartCount = document.getElementById('cart-count');
+		if (cartCount) cartCount.textContent = count;
+	}
+
 	function addToCart(item) {
 		let cart = getCart();
-
 		const existing = cart.find(p => p.id === item.id);
 
 		if (existing) {
@@ -100,129 +77,74 @@
 			cart.push(item);
 		}
 
-		localStorage.setItem('cart', JSON.stringify(cart));
+		saveCart(cart);
 		updateCartCount();
 	}
 
 	function showAddedFeedback(button) {
-		const originalText = button.textContent;
-
+		const original = button.textContent;
 		button.textContent = 'Added!';
 		button.disabled = true;
 
 		setTimeout(() => {
-			button.textContent = originalText;
+			button.textContent = original;
 			button.disabled = false;
 		}, 1200);
-	}
-
-	function updateCartCount() {
-		const cart = getCart();
-		let count = 0;
-
-		cart.forEach(item => {
-			count += item.qty;
-		});
-
-		const cartCount = document.getElementById('cart-count');
-		if (cartCount) {
-			cartCount.textContent = count;
-		}
 	}
 
 	function renderCart(cartDiv) {
 		const cart = getCart();
 		let total = 0;
 
+		cartDiv.innerHTML = '';
+
 		cart.forEach(item => {
 			const line = document.createElement('p');
-			line.textContent = `${item.name} x ${item.qty} - $${(item.price * item.qty).toFixed(2)}`;
+			line.textContent = `${item.name} x ${item.qty} — $${(item.price * item.qty).toFixed(2)}`;
 			cartDiv.appendChild(line);
 			total += item.price * item.qty;
 		});
 
 		const totalLine = document.createElement('p');
-		totalLine.textContent = 'Total: $' + total.toFixed(2);
+		totalLine.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
 		cartDiv.appendChild(totalLine);
 	}
 
+	// ----------------------------
+	// DOM READY (ONE PLACE)
+	// ----------------------------
 
+	document.addEventListener('DOMContentLoaded', function () {
 
-/* Mobile hamburger toggle */
+		// Add-to-cart buttons
+		document.querySelectorAll('.add-to-cart').forEach(button => {
+			button.addEventListener('click', function () {
 
-	var toggle = document.querySelector('.nav-toggle');
-	var nav = document.getElementById('nav');
+				const item = {
+					id: this.dataset.id,
+					name: this.dataset.name,
+					price: Number(this.dataset.price),
+					qty: 1
+				};
 
-	if (toggle && nav) {
-		toggle.addEventListener('click', function (e) {
-			e.preventDefault();
-			nav.classList.toggle('visible');
+				addToCart(item);
+				showAddedFeedback(this);
+			});
 		});
-	}
-});
 
-function getCart() {
-	return JSON.parse(localStorage.getItem('cart')) || [];
-}
+		// Update cart icon count on every page
+		updateCartCount();
 
-function addToCart(item) {
-	let cart = getCart();
-
-	const existing = cart.find(p => p.id === item.id);
-
-	if (existing) {
-		existing.qty += 1;
-	} else {
-		cart.push(item);
-	}
-
-	localStorage.setItem('cart', JSON.stringify(cart));
-	updateCartCount();
-}
-
-function showAddedFeedback(button) {
-	const originalText = button.textContent;
-
-	button.textContent = 'Added!';
-	button.disabled = true;
-
-	setTimeout(() => {
-		button.textContent = originalText;
-		button.disabled = false;
-	}, 1200);
-}
-
-function updateCartCount() {
-	const cart = getCart();
-	let count = 0;
-
-	cart.forEach(item => {
-		count += item.qty;
+		// Only render cart on cart.html
+		const cartDiv = document.getElementById('cart');
+		if (cartDiv) {
+			renderCart(cartDiv);
+		}
 	});
-
-	const cartCount = document.getElementById('cart-count');
-	if (cartCount) {
-		cartCount.textContent = count;
-	}
-}
-function renderCart(cartDiv) {
-	const cart = getCart();
-	let total = 0;
-
-	cart.forEach(item => {
-		const line = document.createElement('p');
-		line.textContent = `${item.name} x ${item.qty} - $${(item.price * item.qty).toFixed(2)}`;
-		cartDiv.appendChild(line);
-		total += item.price * item.qty;
-	});
-
-	const totalLine = document.createElement('p');
-	totalLine.textContent = 'Total: $' + total.toFixed(2);
-	cartDiv.appendChild(totalLine);
-}
-
 
 })(jQuery);
+
+
 
 
 
