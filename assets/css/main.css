@@ -177,7 +177,7 @@ input, select, textarea {
 		}
 
 			a:hover strong {
-				color: #D6B45A;
+				color: #F5F1E8;
 			}
 
 	strong, b {
@@ -1874,7 +1874,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #F5F1E8;
+			background: #C97A5A;
 		}
 
 		input[type="button"]:active,
@@ -1898,7 +1898,7 @@ input, select, textarea {
 			input[type="reset"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background: #F5F1E8;
+				background: #C97A5A;
 			}
 
 			input[type="button"].alt:active,
