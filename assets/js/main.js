@@ -77,7 +77,7 @@ buttons.forEach(button => {
 });
 
 function addToCart(item) {
-	let cart = JSON.parse(localStorage.getItem('cart')) || [];
+	let cart = getCart();
 
 	const existing = cart.find(p => p.id === item.id);
 
@@ -88,8 +88,9 @@ function addToCart(item) {
 	}
 
 	localStorage.setItem('cart', JSON.stringify(cart));
-	alert(item.name + ' added to cart!');
+	updateCartCount();
 }
+
 	function getCart() {
 	return JSON.parse(localStorage.getItem('cart')) || [];
 }
@@ -139,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 })(jQuery);
+
 
 
 
