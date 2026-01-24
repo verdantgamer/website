@@ -60,3 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	// ---- Init count on page load ----
 	updateCartCount();
 });
+document.addEventListener("DOMContentLoaded", function () {
+	if (document.getElementById("cart-items")) {
+		renderCart();
+	}
+});
+
