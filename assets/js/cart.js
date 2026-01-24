@@ -1,5 +1,4 @@
 // assets/js/cart.js
-
 document.addEventListener("DOMContentLoaded", function () {
 
 	// ---- Helpers ----
@@ -20,41 +19,49 @@ document.addEventListener("DOMContentLoaded", function () {
 			el.textContent = count;
 		});
 	}
-function renderCart() {
-	const cart = getCart();
-	const container = document.getElementById("cart-items");
-	const totalEl = document.getElementById("cart-total");
 
-	if (!container) return;
+	// ---- Render Cart (THIS WAS MISSING) ----
+	function renderCart() {
+		const cart = getCart();
+		const container = document.getElementById("cart-items");
+		const totalEl = document.getElementById("cart-total");
 
-	container.innerHTML = "";
+		if (!container) return;
 
-	if (cart.length === 0) {
-		container.innerHTML = "<p>Your cart is empty.</p>";
-		totalEl.innerHTML = "<strong>Total:</strong> $0";
-		return;
+		container.innerHTML = "";
+
+		if (cart.length === 0) {
+			container.innerHTML = "<p>Your cart is empty.</p>";
+			totalEl.innerHTML = "<strong>Total:</strong> $0";
+			return;
+		}
+
+		let total = 0;
+
+		cart.forEach(item => {
+			const itemTotal = item.price * item.qty;
+			total += itemTotal;
+
+			const div = document.createElement("div");
+			div.className = "cart-item";
+			div.innerHTML = `
+				<h3>${item.name}</h3>
+				<p>Quantity: ${item.qty}</p>
+				<p>$${item.price.toFixed(2)}</p>
+			`;
+
+			container.appendChild(div);
+		});
+
+		totalEl.innerHTML = "<strong>Total:</strong> $" + total.toFixed(2);
 	}
 
-	let total = 0;
-
-	cart.forEach(item => {
-		const itemDiv = document.createElement("div");
-		itemDiv.className = "cart-item";
-
-		const itemTotal = item.price * item.qty;
-		total += itemTotal;
-
-		itemDiv.innerHTML = `
-			<h3>${item.name}</h3>
-			<p>Quantity: ${item.qty}</p>
-			<p>$${item.price.toFixed(2)}</p>
-		`;
-
-		container.appendChild(itemDiv);
-	});
-
-	totalEl.innerHTML = "<strong>Total:</strong> $" + total.toFixed(2);
-}
+	// ---- Clear Cart ----
+	window.clearCart = function () {
+		localStorage.removeItem("cart");
+		renderCart();
+		updateCartCount();
+	};
 
 	// ---- Add to Cart Buttons ----
 	document.querySelectorAll(".add-to-cart").forEach(button => {
@@ -70,17 +77,11 @@ function renderCart() {
 			if (existing) {
 				existing.qty += 1;
 			} else {
-				cart.push({
-					id,
-					name,
-					price,
-					qty: 1
-				});
+				cart.push({ id, name, price, qty: 1 });
 			}
 
 			saveCart(cart);
 
-			// ---- "Added!" feedback ----
 			const originalText = this.textContent;
 			this.textContent = "Added!";
 			this.disabled = true;
@@ -92,18 +93,13 @@ function renderCart() {
 		});
 	});
 
-	// ---- Init count on page load ----
+	// ---- Init on page load ----
 	updateCartCount();
-});
-document.addEventListener("DOMContentLoaded", function () {
+
 	if (document.getElementById("cart-items")) {
 		renderCart();
 	}
 });
-function clearCart() {
-	localStorage.removeItem("cart");
-	renderCart();
-	updateCartCount();
-}
+
 
 
