@@ -128,18 +128,20 @@
 			addToCart(item);
 			showAddedFeedback(button);
 		});
-/*Hamburger*/
-		document.addEventListener("DOMContentLoaded", function () {
-	const hamburger = document.getElementById("hamburger");
-	const nav = document.getElementById("nav");
 
-	if (!hamburger || !nav) return;
+});
+// ----------------------------
+// HAMBURGER MENU
+// ----------------------------
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
 
+if (hamburger && nav) {
 	hamburger.addEventListener("click", function (e) {
 		e.preventDefault();
 		nav.classList.toggle("open");
 	});
-});
+}
 
 
 		// Expose remove/clear functions globally for inline links
@@ -154,6 +156,7 @@
 	});
 
 })(jQuery);
+
 
 
 
