@@ -157,10 +157,14 @@
 	const hamburger = document.getElementById("hamburger");
 	const nav = document.getElementById("nav");
 
-	hamburger.addEventListener("click", function () {
+	if (!hamburger || !nav) return;
+
+	hamburger.addEventListener("click", function (e) {
+		e.preventDefault();
 		nav.classList.toggle("open");
 	});
 });
+
 
 		// Expose remove/clear functions globally for inline links
 		window.removeItem = removeItem;
@@ -174,4 +178,5 @@
 	});
 
 })(jQuery);
+
 
