@@ -20,7 +20,6 @@
 		hideDelay: 350
 	});
 
-
 	// ----------------------------
 	// CART LOGIC
 	// ----------------------------
@@ -38,7 +37,7 @@
 		let count = 0;
 		cart.forEach(item => count += item.qty);
 
-		const cartCount = document.querySelector('.cart-count'); // matches your header
+		const cartCount = document.querySelector('.cart-count');
 		if (cartCount) cartCount.textContent = count;
 	}
 
@@ -61,13 +60,13 @@
 		cart.splice(index, 1);
 		saveCart(cart);
 		updateCartCount();
-		renderCart(); // refresh cart page
+		renderCart();
 	}
 
 	function clearCart() {
 		localStorage.removeItem('cart');
 		updateCartCount();
-		renderCart(); // refresh cart page
+		renderCart();
 	}
 
 	function showAddedFeedback(button) {
@@ -85,7 +84,7 @@
 		const cartDiv = document.getElementById('cart');
 		const totalEl = document.getElementById('cart-total');
 
-		if (!cartDiv || !totalEl) return; // not on cart page
+		if (!cartDiv || !totalEl) return;
 
 		const cart = getCart();
 		let total = 0;
@@ -113,8 +112,8 @@
 	// ----------------------------
 	document.addEventListener('DOMContentLoaded', function () {
 
-		// Event delegation for Add-to-Cart buttons
-		document.addEventListener('click', function(e) {
+		// Add-to-cart delegation
+		document.addEventListener('click', function (e) {
 			const button = e.target.closest('.add-to-cart');
 			if (!button) return;
 
@@ -129,34 +128,30 @@
 			showAddedFeedback(button);
 		});
 
-});
-// ----------------------------
-// HAMBURGER MENU
-// ----------------------------
-const hamburger = document.getElementById("hamburger");
-const nav = document.getElementById("nav");
+		// ----------------------------
+		// HAMBURGER MENU
+		// ----------------------------
+		const hamburger = document.getElementById('hamburger');
+		const nav = document.getElementById('nav');
 
-if (hamburger && nav) {
-	hamburger.addEventListener("click", function (e) {
-		e.preventDefault();
-		nav.classList.toggle("open");
-	});
-}
+		if (hamburger && nav) {
+			hamburger.addEventListener('click', function (e) {
+				e.preventDefault();
+				nav.classList.toggle('open');
+			});
+		}
 
-
-		// Expose remove/clear functions globally for inline links
-		window.removeItem = removeItem;
-		window.clearCart = clearCart;
-
-		// Update cart count
+		// Init cart UI
 		updateCartCount();
-
-		// Render cart if on cart page
 		renderCart();
 	});
 
+	// ----------------------------
+	// GLOBAL EXPORTS
+	// ----------------------------
+	window.removeItem = removeItem;
+	window.clearCart = clearCart;
+
 })(jQuery);
-
-
 
 
