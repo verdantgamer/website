@@ -20,30 +20,6 @@
 		hideDelay: 350
 	});
 
-	$(
-		'<div id="titleBar">' +
-			'<a href="#navPanel" class="toggle"></a>' +
-		'</div>'
-	).appendTo($body);
-
-	$(
-		'<div id="navPanel">' +
-			'<nav>' +
-				$('#nav').navList() +
-			'</nav>' +
-		'</div>'
-	)
-	.appendTo($body)
-	.panel({
-		delay: 500,
-		hideOnClick: true,
-		hideOnSwipe: true,
-		resetScroll: true,
-		resetForms: true,
-		side: 'left',
-		target: $body,
-		visibleClass: 'navPanel-visible'
-	});
 
 	// ----------------------------
 	// CART LOGIC
@@ -178,5 +154,6 @@
 	});
 
 })(jQuery);
+
 
 
