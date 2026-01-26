@@ -2784,3 +2784,44 @@ input, select, textarea {
 				}
 
 	}
+/* --- Mobile Hamburger Menu --- */
+
+/* Hide nav by default on small screens */
+#nav {
+    display: none;
+}
+
+/* When hamburger is clicked, show nav */
+#nav.open {
+    display: block;
+    background-color: #1a1a1a; /* adjust to match your site's theme */
+    padding: 1em;
+}
+
+/* Make nav links vertical on mobile */
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav ul li {
+    margin: 0.5em 0;
+}
+
+#nav ul li a {
+    color: #fff; /* adjust as needed */
+    text-decoration: none;
+}
+
+/* Optional: always show nav on larger screens */
+@media screen and (min-width: 768px) {
+    #nav {
+        display: block;
+    }
+    #nav ul li {
+        display: inline-block;
+        margin: 0 1em;
+    }
+}
+
