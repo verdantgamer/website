@@ -264,20 +264,23 @@ input, select, textarea {
 }
 
 @media screen and (max-width: 980px) {
+
 	#hamburger {
 		display: block;
 	}
 
 	#nav {
-		display: none;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease;
 		background: #8FBFA3;
-		padding: 1em 0;
 	}
 
 	#nav.open {
-		display: block;
+		max-height: 500px; /* big enough for menu items */
 	}
 }
+
 
 
 /* Container */
