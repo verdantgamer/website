@@ -252,22 +252,6 @@ input, select, textarea {
 }
 
 
-/*Mobile hamburger*/
-#hamburger {
-	display: none;
-	font-size: 1.8em;
-	cursor: pointer;
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	z-index: 1000;
-}
-
-@media screen and (max-width: 980px) {
-
-	#hamburger {
-		display: block;
-	}
 
 	#nav {
 		max-height: 0;
