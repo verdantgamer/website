@@ -251,34 +251,30 @@ input, select, textarea {
 	cursor: pointer;
 }
 
-
-/*Mobile hamburger*/
-#hamburger {
+/* Hamburger toggle */
+.nav-toggle {
 	display: none;
-	font-size: 1.8em;
+	text-decoration: none;
+	font-size: 1.25em;
+	color: var(--retro-green);
 	cursor: pointer;
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	z-index: 1000;
 }
 
+/* Mobile only */
 @media screen and (max-width: 980px) {
-	#hamburger {
+	.nav-toggle {
 		display: block;
+		margin-top: 1em;
 	}
 
 	#nav {
 		display: none;
-		background: #8FBFA3;
-		padding: 1em 0;
 	}
 
-	#nav.open {
+	#nav.visible {
 		display: block;
 	}
 }
-
 
 /* Container */
 
