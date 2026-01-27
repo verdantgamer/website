@@ -252,6 +252,22 @@ input, select, textarea {
 }
 
 
+/*Mobile hamburger*/
+#hamburger {
+	display: none;
+	font-size: 1.8em;
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 1000;
+}
+
+@media screen and (max-width: 980px) {
+
+	#hamburger {
+		display: block;
+	}
 
 	#nav {
 		max-height: 0;
@@ -2768,63 +2784,7 @@ input, select, textarea {
 				}
 
 	}
-/* Hamburger Icon */
-#hamburger {
-    display: none; /* hide on desktop */
-    cursor: pointer;
-    font-size: 1.5em;
-    color: #fff; /* adjust as needed */
-}
 
-/* Nav Menu */
-#nav {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-}
-
-#nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 2em;
-}
-
-#nav ul li a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
-    #hamburger {
-        display: block;
-    }
-
-    #nav {
-        display: none; /* hide menu by default */
-        flex-direction: column;
-        background-color: #333; /* adjust as needed */
-        position: absolute;
-        top: 60px; /* below header */
-        left: 0;
-        width: 100%;
-        padding: 1em 0;
-        z-index: 1000;
-    }
-
-    #nav.open {
-        display: flex;
-    }
-
-    #nav ul {
-        flex-direction: column;
-        gap: 1em;
-        text-align: center;
-    }
-}
 /* ============================= */
 /* MOBILE HAMBURGER MENU FIX     */
 /* ============================= */
