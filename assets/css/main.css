@@ -2825,3 +2825,69 @@ input, select, textarea {
         text-align: center;
     }
 }
+/* ============================= */
+/* MOBILE HAMBURGER MENU FIX     */
+/* ============================= */
+
+/* Hamburger button */
+#hamburger {
+	display: none;
+	position: absolute;
+	top: 1.5em;
+	right: 1.5em;
+	width: 30px;
+	height: 22px;
+	cursor: pointer;
+	z-index: 3000;
+}
+
+#hamburger span {
+	display: block;
+	height: 4px;
+	margin-bottom: 5px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+/* Desktop nav stays untouched */
+#nav {
+	position: relative;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 736px) {
+
+	/* Show hamburger */
+	#hamburger {
+		display: block;
+	}
+
+	/* Hide nav by default */
+	#nav {
+		display: none;
+		width: 100%;
+		background: #2f2f2f;
+		padding: 1em 0;
+		margin-top: 1em;
+	}
+
+	/* Show nav when open */
+	#nav.open {
+		display: block;
+	}
+
+	/* Stack links vertically */
+	#nav ul {
+		display: block;
+		text-align: center;
+	}
+
+	#nav ul li {
+		display: block;
+		margin: 0.75em 0;
+	}
+
+	#nav ul li a {
+		display: inline-block;
+	}
+}
