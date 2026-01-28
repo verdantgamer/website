@@ -2701,6 +2701,33 @@ input, select, textarea {
 				margin: 1.25em 0 0 0;
 				letter-spacing: 2px;
 			}
+/* Comic book "POW" button */
+.comic-button {
+    position: fixed;        /* stay in top-left even when scrolling */
+    top: 20px;              /* distance from top */
+    left: 20px;             /* distance from left */
+    padding: 15px 25px;     /* size of the button */
+    background: #ff0000;    /* bright red background */
+    color: #fff;            /* text color */
+    font-family: 'Comic Sans MS', 'Chalkboard', sans-serif; /* comic-style font */
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border: 3px solid #000; /* black border for comic effect */
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 #000; /* shadow for popping effect */
+    transform: rotate(-20deg); /* tilt the button */
+    z-index: 1000;           /* make sure it’s on top of other content */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect */
+.comic-button:hover {
+    transform: rotate(-20deg) scale(1.1);
+    box-shadow: 8px 8px 0 #000;
+    cursor: pointer;
+}
 
 		/* Banner */
 
