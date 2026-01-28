@@ -2258,6 +2258,16 @@ input, select, textarea {
     transform: rotate(-20deg); /* tilt the button */
     z-index: 1000;           /* make sure it’s on top of other content */
     transition: transform 0.2s, box-shadow 0.2s;
+	@keyframes smoothScale {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.08); } /* slight growth */
+	100% { transform: scale(1); }
+}
+
+.pow-button {
+  animation: smoothScale 0.4s ease-in-out;
+}
+
 }
 /* Content */
 
