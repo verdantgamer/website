@@ -15,37 +15,10 @@
 	// ----------------------------
 	// Mobile Hamburger Menu
 	// ----------------------------
-	$(document).ready(function() {
-		const $hamburger = $('#hamburger');
-		const $navPanel = $('#navPanel');
-		
-		// Create overlay element
-		const $overlay = $('<div class="nav-overlay"></div>');
-		$body.append($overlay);
-		
-		// Toggle menu function
-		function toggleMenu() {
-			$navPanel.toggleClass('open');
-			$overlay.toggleClass('active');
-		}
-		
-		// Click hamburger to open/close
-		$hamburger.on('click', function(e) {
-			e.preventDefault();
-			toggleMenu();
-		});
-		
-		// Click overlay to close
-		$overlay.on('click', function() {
-			toggleMenu();
-		});
-		
-		// Close menu when clicking a link
-		$navPanel.find('.link').on('click', function() {
-			$navPanel.removeClass('open');
-			$overlay.removeClass('active');
-		});
-	});
+
+$('#hamburger').on('click', function () {
+    $('body').toggleClass('navPanel-visible');
+});
 
 
 	// ----------------------------
@@ -170,6 +143,7 @@
 	window.clearCart = clearCart;
 
 })(jQuery);
+
 
 
 
