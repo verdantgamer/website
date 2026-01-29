@@ -2241,34 +2241,27 @@ input, select, textarea {
 	}
 /* Contact Button */
 .comic-button {
-    position: fixed;        /* stay in top-left even when scrolling */
-    top: 20px;              /* distance from top */
-    left: 20px;             /* distance from left */
-    padding: 15px 25px;     /* size of the button */
-    background: #8FBFA3;    /* bright red background */
-    color: #F7D560;            /* text color */
-    font-family: 'Comic Sans MS', 'Chalkboard', sans-serif; /* comic-style font */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 15px 25px;
+    background: #8FBFA3;
+    color: #F7D560;
+    font-family: 'Comic Sans MS', 'Chalkboard', sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    border: 3px solid #000; /* black border for comic effect */
+    border: 3px solid #000;
     border-radius: 10px;
-    box-shadow: 5px 5px 0 #000; /* shadow for popping effect */
-    transform: rotate(-20deg); /* tilt the button */
-    z-index: 1000;           /* make sure it’s on top of other content */
-    transition: transform 0.2s, box-shadow 0.2s;
-	@keyframes smoothScale {
-	0% { transform: scale(1); }
-	50% { transform: scale(1.08); } /* slight growth */
-	100% { transform: scale(1); }
+    box-shadow: 5px 5px 0 #000;
+    transform: rotate(-20deg);
+    z-index: 1000;
+
+    /* smoother hover */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
-.pow-button {
-  animation: smoothScale 0.4s ease-in-out;
-}
-
-}
 /* Content */
 
 	#content > section,
