@@ -2287,7 +2287,7 @@ input, select, textarea {
     content: "";
     position: absolute;
     inset: -10px;
-    background: #C97A5A; /* header background */
+    background: #8FBFA3; /* header background */
     border-radius: 14px;
     z-index: -2;
     pointer-events: none;
