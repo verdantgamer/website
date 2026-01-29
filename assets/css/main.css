@@ -2266,6 +2266,7 @@ input, select, textarea {
 .comic-button:hover {
     transform: translateX(-50%) translateY(-5px);
     box-shadow: 7px 7px 0 #000;
+	text-decoration: none;
 }
 
 /* Press */
