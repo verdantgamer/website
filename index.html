@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="homepage is-preload">
 <div id="page-wrapper">
@@ -13,7 +13,8 @@
     <!-- Header -->
     <section id="header">
         <div class="container">
-				<a href="contact.html" class="comic-button">CONTACT US!</a>
+            <a href="contact.html" class="comic-button">CONTACT US!</a>
+            
             <!-- Cart Icon -->
             <div class="cart-icon">
                 <a href="cart.html">
@@ -25,8 +26,8 @@
             <!-- Hamburger -->
             <div id="hamburger" aria-label="Menu">☰</div>
 
-				<h1 id="logo"><a href="index.html">The Verdant Gamer</a></h1>
-				<p>A gaming and plant themed store</p>
+            <h1 id="logo"><a href="index.html">The Verdant Gamer</a></h1>
+            <p>A gaming and plant themed store</p>
             
             <!-- Desktop Nav -->
             <nav id="nav">
@@ -38,17 +39,16 @@
                     <li><a class="icon solid fa-leaf" href="custom.html"><span>Custom Stuff</span></a></li>
                 </ul>
             </nav>
-
         </div>
     </section>
 
-    <!-- Mobile Nav Panel - ONLY ONE, OUTSIDE HEADER -->
+    <!-- Mobile Nav Panel -->
     <nav id="navPanel">
-        <a href="index.html" class="link depth-0">🍃 Home</a>
-        <a href="gaming.html" class="link depth-0">🎮 Gaming Stuff</a>
-        <a href="plant.html" class="link depth-0">🌱 Plant Stuff</a>
-        <a href="prints.html" class="link depth-0">🖨️ 3D Prints</a>
-        <a href="custom.html" class="link depth-0">✨ Custom Stuff</a>
+        <a href="index.html" class="link">🍃 Home</a>
+        <a href="gaming.html" class="link">🎮 Gaming Stuff</a>
+        <a href="plant.html" class="link">🌱 Plant Stuff</a>
+        <a href="prints.html" class="link">🖨️ 3D Prints</a>
+        <a href="custom.html" class="link">✨ Custom Stuff</a>
     </nav>
 
     <!-- Features -->
@@ -91,7 +91,6 @@
 
     <!-- Footer -->
     <section id="footer">
-
         <div id="copyright" class="container">
             <ul class="links">
                 <li>&copy; The Verdant Gamer LLC. All rights reserved.</li>
@@ -112,39 +111,7 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/cart.js"></script>
 
-<!-- Hamburger JS -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navPanel = document.getElementById("navPanel");
-    
-    // Create overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'nav-overlay';
-    document.body.appendChild(overlay);
-    
-    // Toggle menu
-    function toggleMenu() {
-        navPanel.classList.toggle('open');
-        overlay.classList.toggle('active');
-    }
-    
-    // Click hamburger
-    hamburger.addEventListener("click", toggleMenu);
-    
-    // Click overlay to close
-    overlay.addEventListener('click', toggleMenu);
-    
-    // Click links to close
-    const links = navPanel.querySelectorAll('.link');
-    links.forEach(link => {
-        link.addEventListener('click', function() {
-            navPanel.classList.remove('open');
-            overlay.classList.remove('active');
-        });
-    });
-});
-</script>
+<!-- NO INLINE SCRIPT - Everything is in main.js -->
 
 </body>
 </html>
