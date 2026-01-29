@@ -2256,37 +2256,33 @@ input, select, textarea {
     border-radius: 10px;
     box-shadow: 5px 5px 0 #000;
     transform: rotate(-20deg);
-    z-index: 1000;
+    z-index: 2000;
+    background-clip: padding-box;
 
-    /* smoother hover */
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
+
+/* Hover = lift, not inflate */
 .comic-button:hover {
-    transform: rotate(-20deg) scale(1.07);
+    transform: rotate(-20deg) translateY(-3px);
     box-shadow: 7px 7px 0 #000;
 }
+
+/* Press */
 .comic-button:active {
-    animation: smoothScale 0.3s ease-in-out;
+    transform: rotate(-20deg) translateY(1px);
+    box-shadow: 3px 3px 0 #000;
 }
 
-@keyframes smoothScale {
-    0%   { transform: rotate(-20deg) scale(1); }
-    50%  { transform: rotate(-20deg) scale(1.06); }
-    100% { transform: rotate(-20deg) scale(1); }
-}
-.comic-button {
-    z-index: 2000; /* higher than header */
-    background-clip: padding-box;
-}
+/* Mask to hide header line behind button */
 .comic-button::before {
     content: "";
     position: absolute;
-    top: -6px;
-    left: -6px;
-    right: -6px;
-    bottom: -6px;
-    background: #C97A5A; /* same as header background */
+    inset: -8px;
+    background: #C97A5A; /* header background */
+    border-radius: 14px;
     z-index: -1;
+    pointer-events: none;
 }
 
 /* Content */
