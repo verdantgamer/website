@@ -2239,14 +2239,14 @@ input, select, textarea {
 		background: #8FBFA3;
 		padding: 6em 0;
 	}
-/* Comic book "POW" button */
+/* Contact Button */
 .comic-button {
     position: fixed;        /* stay in top-left even when scrolling */
     top: 20px;              /* distance from top */
     left: 20px;             /* distance from left */
     padding: 15px 25px;     /* size of the button */
-    background: #ff0000;    /* bright red background */
-    color: #fff;            /* text color */
+    background: #8FBFA3;    /* bright red background */
+    color: #F7D560;            /* text color */
     font-family: 'Comic Sans MS', 'Chalkboard', sans-serif; /* comic-style font */
     font-size: 20px;
     font-weight: bold;
