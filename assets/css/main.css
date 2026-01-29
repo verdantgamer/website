@@ -2248,7 +2248,7 @@ input, select, textarea {
     padding: 15px 35px;
     background: #C97A5A;
     color: #D6B45A;
-    font-family: 'Arvo';
+    font-family: 'Arvo', serif !important;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
