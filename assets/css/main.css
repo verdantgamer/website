@@ -123,7 +123,66 @@ input, select, textarea {
 		line-height: 1.65em;
 		font-size: 15pt;
 	}
+/* Navigation Button Enhancements */
+#nav > ul > li > a {
+    border: 0;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #F5F1E8;
+    outline: 0;
+    display: block;
+    transition: transform 0.35s ease, text-shadow 0.35s ease;
+}
 
+#nav > ul > li > a:before {
+    display: inline-block;
+    background: #F5F1E8;
+    color: #8FBFA3;
+    width: 2.25em;
+    font-size: 0.8em;
+    height: 2.25em;
+    border-radius: 2.25em;
+    line-height: 2.1em;
+    text-align: center;
+    box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+    margin-right: 0.75em;
+    transition: color 0.25s ease-in-out, background 0.25s ease-in-out, transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+#nav > ul > li > a > span {
+    transition: color 0.25s ease-in-out;
+    font-size: 0.85em;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+#nav > ul > li > a:hover,
+#nav > ul > li.active > a {
+    transform: translateY(-3px);
+}
+
+#nav > ul > li > a:hover:before,
+#nav > ul > li.active > a:before {
+    background: #18786C;
+    color: #8FBFA3;
+    transform: translateY(-2px);
+    box-shadow: 0.175em 0.225em 0 0 rgba(0, 0, 0, 0.175);
+}
+
+#nav > ul > li > a:hover > span,
+#nav > ul > li.active > a > span {
+    color: #D6B45A;
+}
+
+#nav > ul > li > a:active {
+    transform: translateY(-1px);
+}
+
+#nav > ul > li > a:active:before {
+    transform: translateY(0px);
+    box-shadow: 0.1em 0.15em 0 0 rgba(0, 0, 0, 0.125);
+}
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 600;
 		text-transform: uppercase;
