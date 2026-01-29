@@ -330,6 +330,11 @@ input, select, textarea {
     background: rgba(201, 122, 90, 1);
 }
 
+/* Mobile nav panel - HIDDEN by default */
+#navPanel {
+    display: none;
+}
+
 /* Show hamburger on mobile */
 @media screen and (max-width: 980px) {
     #hamburger {
@@ -338,7 +343,7 @@ input, select, textarea {
 
     /* Hide desktop nav on mobile */
     #nav {
-        display: none;
+        display: none !important;
     }
 
     /* Mobile nav panel */
@@ -346,16 +351,16 @@ input, select, textarea {
         display: block;
         position: fixed;
         top: 0;
-        left: -275px;
+        left: -100%;
         width: 275px;
         height: 100%;
         background: #C97A5A;
-        z-index: 10000;
+        z-index: 10002;
         overflow-y: auto;
         transition: left 0.3s ease;
-        padding-top: 60px;
-        border-right: solid 2px #8FBFA3;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        padding-top: 80px;
+        border-right: solid 3px #8FBFA3;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
     }
 
     /* Open state */
@@ -367,25 +372,27 @@ input, select, textarea {
     #navPanel .link {
         display: block;
         color: #F5F1E8;
-        text-decoration: none;
-        padding: 15px 20px;
+        text-decoration: none !important;
+        padding: 18px 25px;
         border-bottom: solid 1px rgba(143, 191, 163, 0.3);
         text-transform: uppercase;
         font-weight: 600;
-        font-size: 0.85em;
+        font-size: 0.9em;
         letter-spacing: 2px;
         transition: background 0.25s ease, color 0.25s ease;
+        border-left: 0 !important;
     }
 
     #navPanel .link:hover {
-        background: rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.15);
         color: #D6B45A;
     }
 
     #navPanel .link.depth-0 {
         font-weight: 700;
-        color: #D6B45A;
-        border-bottom: solid 2px rgba(143, 191, 163, 0.5);
+        color: #F5F1E8;
+        font-size: 1em;
+        padding: 20px 25px;
     }
 
     /* Overlay to close menu when clicking outside */
@@ -397,7 +404,7 @@ input, select, textarea {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        z-index: 9999;
+        z-index: 10000;
     }
 
     .nav-overlay.active {
@@ -411,7 +418,6 @@ input, select, textarea {
 .indent-3 { display: inline-block; width: 3em; }
 .indent-4 { display: inline-block; width: 4em; }
 .indent-5 { display: inline-block; width: 5em; }
-
 
 /* Container */
 
