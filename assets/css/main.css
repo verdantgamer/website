@@ -2239,12 +2239,13 @@ input, select, textarea {
 		background: #8FBFA3;
 		padding: 6em 0;
 	}
-/* Contact Button */
+/* Contact Button - Updated positioning */
 .comic-button {
     position: fixed;
-    top: 25px;
-    left: 20px;
-    padding: 15px 25px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 35px;
     background: #8FBFA3;
     color: #F7D560;
     font-family: 'Comic Sans MS', 'Chalkboard', sans-serif;
@@ -2254,33 +2255,42 @@ input, select, textarea {
     text-align: center;
     border: 3px solid #000;
     border-radius: 10px;
-    transform: rotate(-20deg);
     z-index: 2000;
-    background-clip: padding-box;
-
-    transition: transform 0.35s ease;
+    box-shadow: 5px 5px 0 #000;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-
-/* Hover = lift, not inflate */
+/* Hover = lift up */
 .comic-button:hover {
-    transform: rotate(-20deg) translateY(-3px);
+    transform: translateX(-50%) translateY(-5px);
     box-shadow: 7px 7px 0 #000;
 }
 
 /* Press */
 .comic-button:active {
-    transform: rotate(-20deg) translateY(1px);
+    transform: translateX(-50%) translateY(-2px);
     box-shadow: 3px 3px 0 #000;
 }
+
+/* Remove the old ::after and ::before pseudo-elements since we're horizontal now */
 .comic-button::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 10px;
-    box-shadow: 5px 5px 0 #000;
-    z-index: -1;
+    display: none;
 }
+
+.comic-button::before {
+    display: none;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 736px) {
+    .comic-button {
+        bottom: 20px;
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
 
 /* Mask to hide header line behind button */
 .comic-button::before {
