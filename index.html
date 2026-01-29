@@ -23,14 +23,11 @@
             </div>
 
 <!-- Hamburger -->
-<div id="hamburger" aria-label="Menu">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+<div id="hamburger" aria-label="Menu">☰</div>
+
 				<h1 id="logo"><a href="index.html">The Verdant Gamer</a></h1>
 				<p>A gaming and plant themed store</p>
-            <!-- Nav -->
+            <!-- Desktop Nav -->
             <nav id="nav">
                 <ul>
                     <li><a class="icon solid fa-leaf" href="index.html"><span>Home</span></a></li>
@@ -43,6 +40,15 @@
 
         </div>
     </section>
+
+    <!-- Mobile Nav Panel -->
+    <nav id="navPanel">
+        <a href="index.html" class="link depth-0">🍃 Home</a>
+        <a href="gaming.html" class="link depth-0">🎮 Gaming Stuff</a>
+        <a href="plant.html" class="link depth-0">🌱 Plant Stuff</a>
+        <a href="prints.html" class="link depth-0">🖨️ 3D Prints</a>
+        <a href="custom.html" class="link depth-0">✨ Custom Stuff</a>
+    </nav>
 
     <!-- Features -->
     <section id="features">
@@ -109,23 +115,35 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger");
-    const nav = document.getElementById("nav");
-
-    hamburger.addEventListener("click", function () {
-        nav.classList.toggle("open");
+    const navPanel = document.getElementById("navPanel");
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+    
+    // Toggle menu
+    function toggleMenu() {
+        navPanel.classList.toggle('open');
+        overlay.classList.toggle('active');
+    }
+    
+    // Click hamburger
+    hamburger.addEventListener("click", toggleMenu);
+    
+    // Click overlay to close
+    overlay.addEventListener('click', toggleMenu);
+    
+    // Click links to close
+    const links = navPanel.querySelectorAll('.link');
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            navPanel.classList.remove('open');
+            overlay.classList.remove('active');
+        });
     });
 });
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
