@@ -2246,13 +2246,14 @@ input, select, textarea {
     left: 50%;
     transform: translateX(-50%);
     padding: 15px 35px;
-    background: #8FBFA3;
-    color: #F7D560;
+    background: #C97A5A;
+    color: #D6B45A;
     font-family: 'Comic Sans MS', 'Chalkboard', sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
     border: 3px solid #000;
     border-radius: 10px;
     z-index: 2000;
