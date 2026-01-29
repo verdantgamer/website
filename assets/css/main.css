@@ -2239,7 +2239,7 @@ input, select, textarea {
 		background: #8FBFA3;
 		padding: 6em 0;
 	}
-/* Contact Button - Updated positioning */
+/* Contact Button */
 .comic-button {
     position: fixed;
     bottom: 30px;
@@ -2267,6 +2267,7 @@ input, select, textarea {
     transform: translateX(-50%) translateY(-5px);
     box-shadow: 7px 7px 0 #000;
 	text-decoration: none;
+	border-bottom: 3px solid #000 !important;
 }
 
 /* Press */
