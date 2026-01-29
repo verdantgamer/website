@@ -2242,7 +2242,7 @@ input, select, textarea {
 /* Contact Button */
 .comic-button {
     position: fixed;
-    top: 20px;
+    top: 25px;
     left: 20px;
     padding: 15px 25px;
     background: #8FBFA3;
