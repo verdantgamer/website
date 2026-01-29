@@ -12,6 +12,18 @@
 			$body.removeClass('is-preload');
 		}, 100);
 	});
+
+	$('#navPanel')
+    .panel({
+        delay: 300,
+        hideOnClick: true,
+        hideOnSwipe: true,
+        resetScroll: true,
+        side: 'left',
+        target: $('body'),
+        visibleClass: 'navPanel-visible'
+    });
+
 	// ----------------------------
 	// Mobile Hamburger Menu
 	// ----------------------------
@@ -171,6 +183,7 @@
 	window.clearCart = clearCart;
 
 })(jQuery);
+
 
 
 
