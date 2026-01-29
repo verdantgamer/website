@@ -2261,7 +2261,19 @@ input, select, textarea {
     /* smoother hover */
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
+.comic-button:hover {
+    transform: rotate(-20deg) scale(1.07);
+    box-shadow: 7px 7px 0 #000;
+}
+.comic-button:active {
+    animation: smoothScale 0.3s ease-in-out;
+}
 
+@keyframes smoothScale {
+    0%   { transform: rotate(-20deg) scale(1); }
+    50%  { transform: rotate(-20deg) scale(1.06); }
+    100% { transform: rotate(-20deg) scale(1); }
+}
 /* Content */
 
 	#content > section,
