@@ -307,35 +307,110 @@ input, select, textarea {
 }
 
 
-/*Mobile hamburger*/
+/* Mobile Hamburger Menu - Fixed Version */
+
+/* Hide hamburger by default on desktop */
 #hamburger {
-	display: none;
-	font-size: 1.8em;
-	cursor: pointer;
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	z-index: 1000;
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10001;
+    color: #F5F1E8;
+    background: rgba(201, 122, 90, 0.9);
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 2px solid #000;
+    box-shadow: 0.125em 0.125em 0 0 rgba(0, 0, 0, 0.15);
 }
 
+#hamburger:hover {
+    background: rgba(201, 122, 90, 1);
+}
+
+/* Show hamburger on mobile */
 @media screen and (max-width: 980px) {
+    #hamburger {
+        display: block;
+    }
 
-	#hamburger {
-		display: block;
-	}
+    /* Hide desktop nav on mobile */
+    #nav {
+        display: none;
+    }
 
-	#nav {
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height 0.3s ease;
-		background: #8FBFA3;
-	}
+    /* Mobile nav panel */
+    #navPanel {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -275px;
+        width: 275px;
+        height: 100%;
+        background: #C97A5A;
+        z-index: 10000;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+        padding-top: 60px;
+        border-right: solid 2px #8FBFA3;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
 
-	#nav.open {
-		max-height: 500px; /* big enough for menu items */
-	}
+    /* Open state */
+    #navPanel.open {
+        left: 0;
+    }
+
+    /* Nav panel links */
+    #navPanel .link {
+        display: block;
+        color: #F5F1E8;
+        text-decoration: none;
+        padding: 15px 20px;
+        border-bottom: solid 1px rgba(143, 191, 163, 0.3);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.85em;
+        letter-spacing: 2px;
+        transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    #navPanel .link:hover {
+        background: rgba(0, 0, 0, 0.1);
+        color: #D6B45A;
+    }
+
+    #navPanel .link.depth-0 {
+        font-weight: 700;
+        color: #D6B45A;
+        border-bottom: solid 2px rgba(143, 191, 163, 0.5);
+    }
+
+    /* Overlay to close menu when clicking outside */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+
+    .nav-overlay.active {
+        display: block;
+    }
 }
 
+/* Indent levels for submenus */
+.indent-1 { display: inline-block; width: 1em; }
+.indent-2 { display: inline-block; width: 2em; }
+.indent-3 { display: inline-block; width: 3em; }
+.indent-4 { display: inline-block; width: 4em; }
+.indent-5 { display: inline-block; width: 5em; }
 
 
 /* Container */
