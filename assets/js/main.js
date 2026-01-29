@@ -12,7 +12,40 @@
 			$body.removeClass('is-preload');
 		}, 100);
 	});
-
+	// ----------------------------
+	// Mobile Hamburger Menu
+	// ----------------------------
+	$(document).ready(function() {
+		const $hamburger = $('#hamburger');
+		const $navPanel = $('#navPanel');
+		
+		// Create overlay element
+		const $overlay = $('<div class="nav-overlay"></div>');
+		$body.append($overlay);
+		
+		// Toggle menu function
+		function toggleMenu() {
+			$navPanel.toggleClass('open');
+			$overlay.toggleClass('active');
+		}
+		
+		// Click hamburger to open/close
+		$hamburger.on('click', function(e) {
+			e.preventDefault();
+			toggleMenu();
+		});
+		
+		// Click overlay to close
+		$overlay.on('click', function() {
+			toggleMenu();
+		});
+		
+		// Close menu when clicking a link
+		$navPanel.find('.link').on('click', function() {
+			$navPanel.removeClass('open');
+			$overlay.removeClass('active');
+		});
+	});
 
 
 	// ----------------------------
@@ -123,18 +156,7 @@
 			showAddedFeedback(button);
 		});
 
-		// ----------------------------
-		// HAMBURGER MENU
-		// ----------------------------
-		const hamburger = document.getElementById('hamburger');
-		const nav = document.getElementById('nav');
 
-		if (hamburger && nav) {
-			hamburger.addEventListener('click', function (e) {
-				e.preventDefault();
-				nav.classList.toggle('open');
-			});
-		}
 
 		// Init cart UI
 		updateCartCount();
@@ -148,6 +170,7 @@
 	window.clearCart = clearCart;
 
 })(jQuery);
+
 
 
 
