@@ -2645,7 +2645,6 @@ input, select, textarea {
 
 			#page-wrapper {
 				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
 				backface-visibility: hidden;
 				-moz-transition: -moz-transform 0.5s ease;
@@ -2657,7 +2656,6 @@ input, select, textarea {
 
 			#titleBar {
 				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
 				backface-visibility: hidden;
 				-moz-transition: -moz-transform 0.5s ease;
@@ -2719,74 +2717,6 @@ input, select, textarea {
 						opacity: 0.5;
 					}
 
-		
-
-				#navPanel .link {
-					display: block;
-					color: #D6B45A;
-					text-decoration: none;
-					height: 44px;
-					line-height: 44px;
-					border: 0;
-					border-top: solid 1px #3c3c3c;
-					padding: 0 1em 0 1em;
-				}
-
-					#navPanel .link:first-child {
-						border-top: 0;
-					}
-
-					#navPanel .link.depth-0 {
-						font-weight: 600;
-						color: #8FBFA3;
-					}
-
-				#navPanel .indent-1 {
-					display: inline-block;
-					width: 1em;
-				}
-
-				#navPanel .indent-2 {
-					display: inline-block;
-					width: 2em;
-				}
-
-				#navPanel .indent-3 {
-					display: inline-block;
-					width: 3em;
-				}
-
-				#navPanel .indent-4 {
-					display: inline-block;
-					width: 4em;
-				}
-
-				#navPanel .indent-5 {
-					display: inline-block;
-					width: 5em;
-				}
-
-				#navPanel .depth-0 {
-					color: #8FBFA3;
-				}
-
-			body.navPanel-visible #page-wrapper {
-				-moz-transform: translateX(290px);
-				-webkit-transform: translateX(290px);
-				transform: translateX(290px);
-			}
-
-			body.navPanel-visible #titleBar {
-				-moz-transform: translateX(290px);
-				-webkit-transform: translateX(290px);
-				transform: translateX(275px);
-			}
-
-			body.navPanel-visible #navPanel {
-				-webkit-transform: translateX(0);
-				-ms-transform: translateX(0);
-				transform: translateX(0);
-			}
 
 		/* Sidebar */
 
