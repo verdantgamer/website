@@ -374,6 +374,8 @@ input, select, textarea {
         left: 0 !important;
         display: block !important;
         visibility: visible !important;
+		transform: translateX(0) !important;
+		width: 290px;
     }
 
     /* Nav panel links - CRITICAL */
