@@ -416,6 +416,8 @@ input, select, textarea {
     .nav-overlay.active {
         display: block !important;
         visibility: visible !important;
+		background: transparent !important;
+    	pointer-events: none;
     }
 }
 /* Container */
