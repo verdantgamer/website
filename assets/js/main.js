@@ -13,33 +13,26 @@
 		}, 100);
 	});
 
-	$('#navPanel')
-    .panel({
-        delay: 300,
-        hideOnClick: true,
-        hideOnSwipe: true,
-        resetScroll: true,
-        side: 'left',
-        target: $('body'),
-        visibleClass: 'navPanel-visible'
-    });
+	// REMOVE THE OLD .panel() CODE - it's causing the conflict!
 
 	// ----------------------------
-	// Mobile Hamburger Menu
+	// Mobile Hamburger Menu (FIXED)
 	// ----------------------------
 
 	$(document).ready(function() {
 		const $hamburger = $('#hamburger');
 		const $navPanel = $('#navPanel');
+		const $overlay = $('.nav-overlay');
 		
-		// Create overlay element
-		const $overlay = $('<div class="nav-overlay"></div>');
-		$body.append($overlay);
+		// Create overlay if it doesn't exist
+		if ($overlay.length === 0) {
+			$body.append('<div class="nav-overlay"></div>');
+		}
 		
 		// Toggle menu function
 		function toggleMenu() {
-			$navPanel.toggleClass('open');
-			$overlay.toggleClass('active');
+			$navPanel.toggleClass('visible');  // Changed from 'open' to 'visible'
+			$('.nav-overlay').toggleClass('active');
 		}
 		
 		// Click hamburger to open/close
@@ -49,14 +42,14 @@
 		});
 		
 		// Click overlay to close
-		$overlay.on('click', function() {
+		$(document).on('click', '.nav-overlay', function() {
 			toggleMenu();
 		});
 		
 		// Close menu when clicking a link
 		$navPanel.find('.link').on('click', function() {
-			$navPanel.removeClass('open');
-			$overlay.removeClass('active');
+			$navPanel.removeClass('visible');  // Changed from 'open' to 'visible'
+			$('.nav-overlay').removeClass('active');
 		});
 	});
 
@@ -169,8 +162,6 @@
 			showAddedFeedback(button);
 		});
 
-
-
 		// Init cart UI
 		updateCartCount();
 		renderCart();
@@ -183,11 +174,3 @@
 	window.clearCart = clearCart;
 
 })(jQuery);
-
-
-
-
-
-
-
-
