@@ -356,7 +356,7 @@ input, select, textarea {
         visibility: visible !important;
         position: fixed !important;
         top: 0 !important;
-        left: -100% !important;
+        left: -275px !important;
         width: 275px !important;
         height: 100vh !important;
         background: #C97A5A !important;
