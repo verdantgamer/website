@@ -387,6 +387,7 @@ input, select, textarea {
         border-left: 0 !important;
         border-right: 0 !important;
         border-top: 0 !important;
+		border: none !important;
         text-transform: uppercase;
         font-weight: 700 !important;
         font-size: 16px !important;
