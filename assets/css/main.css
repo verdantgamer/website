@@ -1698,17 +1698,11 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		-moz-transition: opacity 0.25s ease-in-out;
-		-webkit-transition: opacity 0.25s ease-in-out;
-		-ms-transition: opacity 0.25s ease-in-out;
-		transition: opacity 0.25s ease-in-out;
+
 		display: inline-block;
 		border: solid 6px #C97A5A !important;
 	}
 
-		.image:hover {
-			opacity: 0.9;
-		}
 
 		.image img {
 			display: block;
@@ -1721,17 +1715,18 @@ input, select, textarea {
 		}
 
 .image.featured {
-  background: #1f2b24;
-  padding: 12px;
-  border-radius: 14px;
-  border: 2px solid #8FBFA3;
-  transition: 0.2s ease; /* Move transition here so it animates both ways */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Optional: adds depth */
+    background: #1f2b24;
+    padding: 12px;
+    border-radius: 14px;
+    border: 2px solid #8FBFA3 !important; /* Added !important to override the base .image border */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.25s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .image.featured:hover {
-  transform: translate(-4px, -4px); /* Moves left AND up */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Optional: enhances the "lifting" effect */
+    transform: translate(-4px, -4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    opacity: 0.9; /* Keep the opacity effect too */
 }
 
 
