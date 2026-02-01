@@ -70,29 +70,6 @@ input, select, textarea {
 
 /* Basic */
 
-.cart-icon {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-}
-
-.cart-icon img {
-	width: 32px;
-	height: 32px;
-}
-
-.cart-count {
-	position: absolute;
-	top: -6px;
-	right: -6px;
-	background: #8FBFA3;
-	color: #F5F1E8;
-	font-size: 12px;
-	padding: 2px 6px;
-	border-radius: 50%;
-}
-
-
 	html {
 		box-sizing: border-box;
 	}
@@ -123,6 +100,49 @@ input, select, textarea {
 		line-height: 1.65em;
 		font-size: 15pt;
 	}
+/*Cart Icon */
+
+.cart-icon {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 100;
+}
+
+.cart-icon a {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	border: none !important;
+}
+
+.cart-icon i {
+	font-size: 32px !important;
+	color: #F5F1E8;
+	transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.cart-icon a:hover i {
+	color: #D6B45A;
+	transform: scale(1.1) rotate(15deg);
+}
+
+.cart-count {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	background: #D6B45A;
+	color: #1f2b24;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 4px 7px;
+	border-radius: 50%;
+	border: 2px solid #F5F1E8;
+	min-width: 24px;
+	text-align: center;
+	z-index: 101;
+}
+
 /* Navigation Button Enhancements */
 #nav > ul > li > a {
     border: 0;
