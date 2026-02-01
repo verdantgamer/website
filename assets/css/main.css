@@ -1760,6 +1760,11 @@ input, select, textarea {
     font-size: 1em !important;
     letter-spacing: 2px !important;
     text-transform: uppercase !important;
+	object-fit: cover !important;
+    border-radius: 4px !important;
+    display: block !important;
+    border: 2px solid #000 !important; /* Green border around the image */
+    flex-shrink: 0 !important;
 }
 
 .image.featured .card-info p {
