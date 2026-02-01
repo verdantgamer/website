@@ -2354,6 +2354,13 @@ input, select, textarea {
 		#features ul.actions {
 			margin-top: 1.25em;
 		}
+#features .row > * {
+    display: flex !important;
+}
+
+#features section {
+    height: 100% !important;
+}
 
 /* Banner */
 
