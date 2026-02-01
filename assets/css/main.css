@@ -1724,30 +1724,32 @@ input, select, textarea {
     display: block;
     text-decoration: none;
     overflow: hidden;
+    height: 100%; /* Make all cards same height */
 }
 
 .image.featured:hover {
     transform: translate(-4px, -4px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-    border-bottom: 2px solid #8FBFA3 !important; /* Prevent link underline */
+    border-bottom: 2px solid #8FBFA3 !important;
 }
 
 .image.featured img {
     width: 100%;
-    height: 200px; /* Fixed height for uniform cards */
-    object-fit: cover; /* Crops image to fit nicely */
+    height: 180px; /* Reduced image height to make room for text */
+    object-fit: cover;
     border-radius: 6px;
     display: block;
 }
 
 .image.featured .card-info {
-    padding: 15px 10px 5px 10px;
+    padding: 20px 15px; /* Increased padding - 3x bigger text area */
     text-align: center;
+    min-height: 140px; /* Ensures consistent text area size */
 }
 
 .image.featured .card-info h3 {
     color: #8FBFA3;
-    margin: 0 0 0.5em 0;
+    margin: 0 0 0.75em 0;
     font-size: 1.1em;
     letter-spacing: 2px;
 }
@@ -1756,7 +1758,7 @@ input, select, textarea {
     color: #F5F1E8;
     margin: 0;
     font-size: 0.9em;
-    line-height: 1.4em;
+    line-height: 1.5em;
     text-align: center;
 }
 
