@@ -2845,14 +2845,6 @@ input, select, textarea {
 				letter-spacing: 2px;
 			}
 
-
-/* Hover effect */
-.comic-button:hover {
-    transform: rotate(-20deg) scale(1.1);
-    box-shadow: 8px 8px 0 #000;
-    cursor: pointer;
-}
-
 		/* Banner */
 
 			#banner {
