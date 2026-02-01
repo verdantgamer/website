@@ -1718,7 +1718,7 @@ input, select, textarea {
     background: #1f2b24 !important;
     padding: 8px !important;
     border-radius: 12px !important;
-    border: 4px solid #000 !important; /* Thick black outer border like MTG */
+    border: 6px solid #000 !important; /* Thick black outer border like MTG */
     transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
     display: flex !important;
@@ -1740,7 +1740,7 @@ input, select, textarea {
     object-fit: cover !important;
     border-radius: 4px !important;
     display: block !important;
-    border: 2px solid #8FBFA3 !important; /* Green border around the image */
+    border: 4px solid #000 !important; /* Green border around the image */
     flex-shrink: 0 !important;
 }
 
@@ -1769,6 +1769,7 @@ input, select, textarea {
     line-height: 1.4em !important;
     text-align: center !important;
 }
+
 		.image.left {
 			float: left;
 			margin: 0 1.5em 1.5em 0;
