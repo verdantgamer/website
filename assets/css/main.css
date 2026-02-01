@@ -2354,12 +2354,22 @@ input, select, textarea {
 		#features ul.actions {
 			margin-top: 1.25em;
 		}
-#features .row > * {
+/* Force equal height cards */
+#features .row {
+    align-items: stretch !important;
+}
+
+#features .row > div {
     display: flex !important;
 }
 
-#features section {
-    height: 100% !important;
+#features .row > div > section {
+    display: flex !important;
+    width: 100% !important;
+}
+
+#features .row > div > section > a {
+    width: 100% !important;
 }
 
 /* Banner */
