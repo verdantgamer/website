@@ -1755,7 +1755,8 @@ input, select, textarea {
 }
 
 .image.featured .card-info h3 {
-    color: #8FBFA3 !important;
+	background: #B2AC88 !important;
+    color: #D6B45A !important;
     margin: 0 0 0.6em 0 !important;
     font-size: 1em !important;
     letter-spacing: 2px !important;
