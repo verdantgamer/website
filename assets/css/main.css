@@ -1719,6 +1719,8 @@ input, select, textarea {
     padding: 12px !important;
     border-radius: 14px !important;
     border: 2px solid #8FBFA3 !important;
+	outline: 3px solid #000 !important; /* Black border around the card */
+    outline-offset: -3px !important; /* Keeps it inside the card */
     transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
     display: flex !important;
