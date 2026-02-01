@@ -1725,11 +1725,13 @@ input, select, textarea {
   padding: 12px;
   border-radius: 14px;
   border: 2px solid #8FBFA3;
+  transition: 0.2s ease; /* Move transition here so it animates both ways */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Optional: adds depth */
 }
 
 .image.featured:hover {
-  transform: translateY(-4px);
-  transition: 0.2s ease;
+  transform: translate(-4px, -4px); /* Moves left AND up */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Optional: enhances the "lifting" effect */
 }
 
 
