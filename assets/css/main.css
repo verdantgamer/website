@@ -1715,7 +1715,7 @@ input, select, textarea {
 		}
 
 .image.featured {
-    background: #1f2b24 !important;
+    background: #C97A5A !important;
     padding: 8px !important;
     border-radius: 12px !important;
     border: 6px solid #000 !important; /* Thick black outer border like MTG */
@@ -1755,6 +1755,7 @@ input, select, textarea {
 }
 
 .image.featured .card-info h3 {
+	background: #C97A5A !important;
     color: #8FBFA3 !important;
     margin: 0 0 0.6em 0 !important;
     font-size: 1em !important;
