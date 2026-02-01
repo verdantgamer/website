@@ -1720,11 +1720,16 @@ input, select, textarea {
 			width: 100%;
 		}
 
-.image.featured img {
-  box-shadow:
-    0 0 0 3px rgba(143, 191, 163, 0.5),
-    0 8px 20px rgba(0, 0, 0, 0.35);
-  border-radius: 12px;
+.image.featured {
+  background: #1f2b24;
+  padding: 12px;
+  border-radius: 14px;
+  border: 2px solid #8FBFA3;
+}
+
+.image.featured:hover {
+  transform: translateY(-4px);
+  transition: 0.2s ease;
 }
 
 
