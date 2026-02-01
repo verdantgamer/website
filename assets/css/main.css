@@ -1735,16 +1735,16 @@ input, select, textarea {
 
 .image.featured img {
     width: 100%;
-    height: 180px; /* Reduced image height to make room for text */
+    height: 180px !important; /* Reduced image height to make room for text */
     object-fit: cover;
     border-radius: 6px;
     display: block;
 }
 
 .image.featured .card-info {
-    padding: 20px 15px; /* Increased padding - 3x bigger text area */
+    padding: 20px 15px !important; /* Increased padding - 3x bigger text area */
     text-align: center;
-    min-height: 140px; /* Ensures consistent text area size */
+    min-height: 140px !important; /* Ensures consistent text area size */
 }
 
 .image.featured .card-info h3 {
