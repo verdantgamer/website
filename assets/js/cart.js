@@ -43,30 +43,21 @@ function addToCart(id, name, price, image) {
     }
     
     saveCart();
-    
-    // Show feedback
-    showAddedToCartFeedback(name);
 }
 
-// Show feedback when item is added
-function showAddedToCartFeedback(itemName) {
-    // Remove any existing feedback
-    const existingFeedback = document.querySelector('.cart-feedback');
-    if (existingFeedback) {
-        existingFeedback.remove();
+// Show card flip feedback when item is added
+function showCardFlipFeedback(button) {
+    // Find the parent product card
+    const productCard = button.closest('.product-card');
+    if (productCard) {
+        // Add flipped class
+        productCard.classList.add('flipped');
+        
+        // Remove flipped class after 2 seconds
+        setTimeout(() => {
+            productCard.classList.remove('flipped');
+        }, 2000);
     }
-    
-    // Create new feedback
-    const feedback = document.createElement('div');
-    feedback.className = 'cart-feedback';
-    feedback.textContent = `✓ ${itemName} added to cart!`;
-    document.body.appendChild(feedback);
-    
-    // Remove after 3 seconds
-    setTimeout(() => {
-        feedback.classList.add('fade-out');
-        setTimeout(() => feedback.remove(), 300);
-    }, 3000);
 }
 
 // Remove item from cart
@@ -174,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const price = this.getAttribute('data-price');
             const image = this.getAttribute('data-image');
             addToCart(id, name, price, image);
+            showCardFlipFeedback(this);
         });
     });
 });
