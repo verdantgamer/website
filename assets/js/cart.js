@@ -108,7 +108,7 @@ function displayCart() {
         cartHTML += `
             <div class="col-4 col-6-medium col-12-small">
                 <section class="cart-item-card">
-                    <div class="quantity-badge">x${item.quantity}</div>
+                    
                     <button class="remove-item" onclick="removeFromCart('${item.id}')" title="Remove from cart">
                         <i class="fas fa-times"></i>
                     </button>
