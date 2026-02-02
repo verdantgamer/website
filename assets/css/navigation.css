@@ -1,0 +1,406 @@
+/* ============================================
+   NAVIGATION STYLES
+   Desktop navigation, mobile hamburger menu, and all nav-related animations
+   ============================================ */
+
+/* Desktop Navigation Button Enhancements */
+#nav > ul > li > a {
+    border: 0;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #F5F1E8;
+    outline: 0;
+    display: block;
+    transition: transform 0.35s ease, text-shadow 0.35s ease;
+}
+
+#nav > ul > li > a:before {
+    display: inline-block;
+    background: #F5F1E8;
+    color: #8FBFA3;
+    width: 2.25em;
+    font-size: 0.8em;
+    height: 2.25em;
+    border-radius: 2.25em;
+    line-height: 2.1em;
+    text-align: center;
+    box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+    margin-right: 0.75em;
+    transition: color 0.25s ease-in-out, background 0.25s ease-in-out, transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+#nav > ul > li > a > span {
+    transition: color 0.25s ease-in-out;
+    font-size: 0.85em;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+#nav > ul > li > a:hover,
+#nav > ul > li.active > a {
+    transform: translateY(-3px);
+}
+
+#nav > ul > li > a:hover:before,
+#nav > ul > li.active > a:before {
+    background: #18786C;
+    color: #8FBFA3;
+    transform: translateY(-2px);
+    box-shadow: 0.175em 0.225em 0 0 rgba(0, 0, 0, 0.175);
+}
+
+#nav > ul > li > a:hover > span,
+#nav > ul > li.active > a > span {
+    color: #D6B45A;
+}
+
+#nav > ul > li > a:active {
+    transform: translateY(-1px);
+}
+
+#nav > ul > li > a:active:before {
+    transform: translateY(0px);
+    box-shadow: 0.1em 0.15em 0 0 rgba(0, 0, 0, 0.125);
+}
+
+/* Nav (from original main.css) */
+#nav {
+    position: absolute;
+    top: 3em;
+    left: 0;
+    width: 100%;
+    cursor: default;
+}
+
+#nav > ul > li {
+    display: inline-block;
+    padding-right: 2em;
+}
+
+#nav > ul > li:last-child {
+    padding-right: 0;
+}
+
+#nav > ul > li > a {
+    border: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #F5F1E8;
+    outline: 0;
+    display: block;
+}
+
+#nav > ul > li > a:before {
+    display: inline-block;
+    background: #F5F1E8;
+    color: #8FBFA3;
+    width: 2.25em;
+    font-size: 0.8em;
+    height: 2.25em;
+    border-radius: 2.25em;
+    line-height: 2.1em;
+    text-align: center;
+    box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+    margin-right: 0.75em;
+    -moz-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+    -webkit-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+}
+
+#nav > ul > li > a > span {
+    -moz-transition: color 0.25s ease-in-out;
+    -webkit-transition: color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+    font-size: 0.85em;
+    letter-spacing: 3px;
+}
+
+#nav > ul > li > ul {
+    display: none;
+}
+
+#nav > ul > li.active > a:before,
+#nav > ul > li:hover > a:before {
+    background: #18786C;
+    color: #8FBFA3;
+}
+
+#nav > ul > li.active > a > span,
+#nav > ul > li:hover > a > span {
+    color: #649e66;
+}
+
+/* Dropdown Menu */
+.dropotron {
+    text-align: left;
+    border: solid 1px #8FBFA3;
+    border-radius: 4px;
+    background: #8FBFA3;
+    background: rgba(255, 255, 255, 0.965);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    padding: 0.75em 0 0.5em 0;
+    min-width: 12em;
+    margin-top: calc(-0.5em + 1px);
+    margin-left: -2px;
+    list-style: none;
+}
+
+.dropotron.level-0 {
+    margin-top: 1.5em;
+    margin-left: -1em;
+}
+
+.dropotron.level-0:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 1.25em;
+    top: calc(-0.75em + 1px);
+    border-left: solid 0.75em rgba(255, 255, 255, 0);
+    border-right: solid 0.75em rgba(255, 255, 255, 0);
+    border-bottom: solid 0.75em #8FBFA3;
+}
+
+.dropotron.level-0:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 1.25em;
+    top: -0.75em;
+    border-left: solid 0.75em rgba(255, 255, 255, 0);
+    border-right: solid 0.75em rgba(255, 255, 255, 0);
+    border-bottom: solid 0.75em #ccc;
+}
+
+.dropotron span, .dropotron a {
+    display: block;
+    padding: 0.3em 1em 0.3em 1em;
+    border: 0;
+    border-top: solid 1px #8FBFA3;
+    outline: 0;
+}
+
+.dropotron li {
+    padding-left: 0;
+    margin: 0;
+}
+
+.dropotron li:first-child > span, .dropotron li:first-child > a {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.dropotron li:hover > span, .dropotron li:hover > a {
+    -moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+    -webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+    color: #7700D7;
+}
+
+/* ============================================
+   MOBILE HAMBURGER MENU
+   ============================================ */
+
+/* Force hide on desktop */
+#hamburger {
+    display: none !important;
+}
+
+#navPanel {
+    display: none !important;
+}
+
+/* Mobile styles with maximum specificity */
+@media screen and (max-width: 980px) {
+    /* Show hamburger on mobile */
+    #hamburger {
+        display: block !important;
+        font-size: 1.8em;
+        cursor: pointer;
+        position: fixed !important;
+        top: 20px !important;
+        left: 20px !important;
+        z-index: 10001 !important;
+        color: #F5F1E8 !important;
+        background: rgba(201, 122, 90, 0.9) !important;
+        padding: 10px 15px !important;
+        border-radius: 4px;
+        border: 2px solid #000 !important;
+        box-shadow: 0.125em 0.125em 0 0 rgba(0, 0, 0, 0.15);
+    }
+
+    #hamburger:hover {
+        background: rgba(201, 122, 90, 1) !important;
+    }
+
+    /* Force hide desktop nav */
+    #nav {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    /* Mobile nav panel - CRITICAL STYLES */
+    #navPanel {
+        display: block !important;
+        visibility: visible !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: -290px !important;
+        width: 290px !important;
+        height: 100vh !important;
+        background: #C97A5A !important;
+        z-index: 10002 !important;
+        overflow-y: auto !important;
+        transition: left 0.3s ease !important;
+        padding-top: 80px !important;
+        border-right: solid 3px #8FBFA3 !important;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5) !important;
+        margin: 0 !important;
+    }
+
+    /* Open state - CRITICAL */
+    #navPanel.visible {
+        left: 0 !important;
+        display: block !important;
+        visibility: visible !important;
+		transform: translateX(0) !important;
+		width: 290px;
+    }
+
+    /* Nav panel links - CRITICAL */
+    #navPanel .link {
+        display: block !important;
+        visibility: visible !important;
+        color: #F5F1E8 !important;
+        text-decoration: none !important;
+        padding: 20px 25px !important;
+		border: none !important;
+        text-transform: uppercase;
+        font-weight: 700 !important;
+        font-size: 16px !important;
+        letter-spacing: 2px;
+        transition: background 0.25s ease, color 0.25s ease;
+        background: transparent;
+        margin: 0 !important;
+    }
+
+    #navPanel .link:hover {
+        background: rgba(0, 0, 0, 0.2) !important;
+        color: #D6B45A !important;
+    }
+
+    /* Overlay - CRITICAL */
+    .nav-overlay {
+        display: none !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: rgba(0, 0, 0, 0.6) !important;
+        z-index: 10000 !important;
+    }
+
+    .nav-overlay.active {
+        display: block !important;
+        visibility: visible !important;
+		background: transparent !important;
+    	pointer-events: none;
+    }
+}
+
+/* Mobile Nav responsive adjustments */
+@media screen and (max-width: 980px) {
+    /* Nav */
+    #nav {
+        display: none;
+    }
+
+    #page-wrapper {
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-transition: -moz-transform 0.5s ease;
+        -webkit-transition: -webkit-transform 0.5s ease;
+        -ms-transition: -ms-transform 0.5s ease;
+        transition: transform 0.5s ease;
+        padding-bottom: 1px;
+    }
+
+    #titleBar {
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-transition: -moz-transform 0.5s ease;
+        -webkit-transition: -webkit-transform 0.5s ease;
+        -ms-transition: -ms-transform 0.5s ease;
+        transition: transform 0.5s ease;
+        display: block;
+        height: 44px;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10001;
+    }
+
+    #titleBar .toggle {
+        text-decoration: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 80px;
+        height: 60px;
+        border: 0;
+    }
+
+    #titleBar .toggle:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        text-transform: none !important;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+
+    #titleBar .toggle:before {
+        display: inline-block;
+        text-decoration: none;
+        content: '\f0c9';
+        display: block;
+        width: 60px;
+        height: 40px;
+        background: rgba(232, 232, 232, 0.9);
+        border-radius: 4px;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        box-shadow: 0.125em 0.125em 0 0 rgba(0, 0, 0, 0.15);
+        text-align: center;
+        line-height: 40px;
+        font-size: 18px;
+        color: #aaa;
+    }
+
+    #titleBar .toggle:active:before {
+        opacity: 0.5;
+    }
+}
+
+/* Nav adjustments for Large screens */
+@media screen and (max-width: 1280px) {
+    #nav > ul > li {
+        padding-right: 1.25em;
+    }
+}
