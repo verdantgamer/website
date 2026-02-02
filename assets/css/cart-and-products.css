@@ -3,6 +3,25 @@
    Cart icon, product cards, shop items, and cart functionality
    ============================================ */
 
+/* ===============================
+   3D ISOLATION — DO NOT REMOVE
+   =============================== */
+
+/* Flip cards ONLY allowed in product grids */
+.products-page .product-card {
+    perspective: 1000px;
+}
+
+/* Kill 3D context everywhere else */
+.cart-page,
+.cart-page * {
+    transform: none !important;
+    perspective: none !important;
+    transform-style: flat !important;
+    backface-visibility: visible !important;
+}
+
+
 /* Cart Icon */
 .cart-icon {
 	position: absolute;
