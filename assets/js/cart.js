@@ -87,7 +87,8 @@ function displayCart() {
     const cartTotalElement = document.getElementById('cart-total');
     
     if (!cartItemsContainer) return;
-    
+    <div id="cart-items"></div>
+
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = `
             <div style="text-align: center; padding: 2rem;">
