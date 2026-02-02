@@ -172,6 +172,8 @@
 
 /* Cart Item Cards */
 .cart-item-card {
+	transform: translateZ(0);
+    backface-visibility: visible;
     position: relative;
     background: #C97A5A;
     padding: 8px;
