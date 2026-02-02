@@ -1,106 +1,141 @@
-// assets/js/cart.js
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <title>Plants - The Verdant Gamer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+<div id="page-wrapper">
 
-// ---- Helpers ----
-function getCart() {
-	return JSON.parse(localStorage.getItem("cart")) || [];
-}
+    <!-- Header -->
+    <section id="header">
+        <div class="container">
+            <a href="contact.html" class="comic-button">CONTACT US!</a>
+            
+            <!-- Cart Icon -->
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <span class="cart-count">0</span>
+                    <i class="fa-solid fa-dice-d20"></i>
+                </a>
+            </div>
 
-function saveCart(cart) {
-	localStorage.setItem("cart", JSON.stringify(cart));
-	updateCartCount();
-}
+            <!-- Hamburger -->
+            <a href="#navPanel" id="hamburger" aria-label="Menu">☰</a>
 
-function updateCartCount() {
-	const cart = getCart();
-	const count = cart.reduce((sum, item) => sum + item.qty, 0);
+            <h1 id="logo"><a href="index.html">The Verdant Gamer</a></h1>
+            <p>A gaming and plant themed store</p>
+            
+            <!-- Desktop Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a class="icon solid fa-leaf" href="index.html"><span>Home</span></a></li>
+                    <li><a class="icon solid fa-leaf" href="gaming.html"><span>Gaming Stuff</span></a></li>
+                    <li><a class="icon solid fa-leaf" href="plant.html"><span>Plant Stuff</span></a></li>
+                    <li><a class="icon solid fa-leaf" href="prints.html"><span>3D Prints</span></a></li>
+                    <li><a class="icon solid fa-leaf" href="custom.html"><span>Custom Stuff</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
 
-	document.querySelectorAll(".cart-count").forEach(el => {
-		el.textContent = count;
-	});
-}
+    <!-- Mobile Nav Panel -->
+    <nav id="navPanel">
+        <a href="index.html" class="link">🍃 Home</a>
+        <a href="gaming.html" class="link">🎮 Gaming Stuff</a>
+        <a href="plant.html" class="link">🌱 Plant Stuff</a>
+        <a href="prints.html" class="link">🖨️ 3D Prints</a>
+        <a href="custom.html" class="link">✨ Custom Stuff</a>
+    </nav>
 
-// ---- Render Cart ----
-function renderCart() {
-	const cart = getCart();
-	const container = document.getElementById("cart-items");
-	const totalEl = document.getElementById("cart-total");
+    <!-- Main Content -->
+    <section id="main">
+        <div class="container">
+            <header class="major">
+                <h2>Plant Stuff</h2>
+                <p>Concrete pots, planters, and plant-inspired designs.</p>
+            </header>
+            <section>
+                <p>
+                    This page features handmade concrete pots, planters, and
+                    plant-themed pieces designed to pair with gaming setups,
+                    desks, and shelves. Each item is made locally and available
+                    for local pickup only.
+                </p>
+            </section>
+        </div>
+    </section>
 
-	if (!container) return;
+    <!-- Products Section -->
+    <section id="features">
+        <div class="container">
+            <div class="row aln-center">
 
-	container.innerHTML = "";
+                <!-- Product Card 1 -->
+                <div class="col-4 col-6-medium col-12-small">
+                    <section class="product-card">
+                        <div class="image featured">
+                            <img src="images/planter-d20.jpg" alt="Concrete D20 Planter" />
+                        </div>
+                        <div class="card-info">
+                            <h3>D20 Concrete Planter</h3>
+                            <p class="price">$25.00</p>
+                            <button class="add-to-cart button primary"
+                                data-id="pot01"
+                                data-name="D20 Concrete Planter"
+                                data-price="25"
+                                data-image="images/planter-d20.jpg">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </section>
+                </div>
 
-	if (cart.length === 0) {
-		container.innerHTML = "<p>Your cart is empty.</p>";
-		totalEl.innerHTML = "<strong>Total:</strong> $0";
-		return;
-	}
+                <!-- Product Card 2 -->
+                <div class="col-4 col-6-medium col-12-small">
+                    <section class="product-card">
+                        <div class="image featured">
+                            <img src="images/fern-pot.jpg" alt="Fern Concrete Pot" />
+                        </div>
+                        <div class="card-info">
+                            <h3>Fern Pot</h3>
+                            <p class="price">$18.00</p>
+                            <button class="add-to-cart button primary"
+                                data-id="fern-pot"
+                                data-name="Fern Pot"
+                                data-price="18"
+                                data-image="images/fern-pot.jpg">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </section>
+                </div>
 
-	let total = 0;
+            </div>
+        </div>
+    </section>
 
-	cart.forEach(item => {
-		const itemTotal = item.price * item.qty;
-		total += itemTotal;
+    <!-- Footer -->
+    <section id="footer">
+        <div id="copyright" class="container">
+            <ul class="links">
+                <li>&copy; The Verdant Gamer LLC. All rights reserved.</li>
+            </ul>
+        </div>
+    </section>
 
-		const div = document.createElement("div");
-		div.className = "cart-item";
-		div.innerHTML = `
-			<h3>${item.name}</h3>
-			<p>Quantity: ${item.qty}</p>
-			<p>$${item.price.toFixed(2)}</p>
-		`;
+</div>
 
-		container.appendChild(div);
-	});
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cart.js"></script>
 
-	totalEl.innerHTML = "<strong>Total:</strong> $" + total.toFixed(2);
-}
-
-// ---- Clear Cart ----
-function clearCart() {
-	localStorage.removeItem("cart");
-	renderCart();
-	updateCartCount();
-}
-
-// ---- Page Init ----
-document.addEventListener("DOMContentLoaded", function () {
-
-	// Add to cart buttons
-	document.querySelectorAll(".add-to-cart").forEach(button => {
-		button.addEventListener("click", function () {
-
-			const id = this.dataset.id;
-			const name = this.dataset.name;
-			const price = parseFloat(this.dataset.price);
-
-			let cart = getCart();
-			let existing = cart.find(item => item.id === id);
-
-			if (existing) {
-				existing.qty += 1;
-			} else {
-				cart.push({ id, name, price, qty: 1 });
-			}
-
-			saveCart(cart);
-
-			const originalText = this.textContent;
-			this.textContent = "Added!";
-			this.disabled = true;
-
-			setTimeout(() => {
-				this.textContent = originalText;
-				this.disabled = false;
-			}, 900);
-		});
-	});
-
-	updateCartCount();
-
-	if (document.getElementById("cart-items")) {
-		renderCart();
-	}
-});
-
-
-
+</body>
+</html>
