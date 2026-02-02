@@ -108,6 +108,7 @@ function displayCart() {
         cartHTML += `
             <div class="col-4 col-6-medium col-12-small">
                 <section class="cart-item-card">
+                    <div class="quantity-badge">x${item.quantity}</div>
                     <button class="remove-item" onclick="removeFromCart('${item.id}')" title="Remove from cart">
                         <i class="fas fa-times"></i>
                     </button>
@@ -135,6 +136,31 @@ function displayCart() {
     // Calculate and display total
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     cartTotalElement.innerHTML = `<strong>Total:</strong> $${total.toFixed(2)}`;
+}
+
+/* Cart Item Card */
+.cart-item-card {
+    position: relative;
+    background: #f7f3e8;
+    border: 3px solid #111;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 #000;
+    overflow: hidden;
+}
+
+/* Quantity badge like MTG counters */
+.quantity-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #111;
+    color: #f7d560;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    box-shadow: 2px 2px 0 #000;
+    pointer-events: none;
 }
 
 // Clear entire cart
