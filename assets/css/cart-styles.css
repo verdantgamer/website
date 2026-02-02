@@ -44,6 +44,19 @@
     pointer-events: none; /* Prevent link click, only button should work */
 }
 
+/* Quantity Badge Effects */
+.quantity-badge {
+    background: linear-gradient(135deg, #111, #333);
+}
+.quantity-badge {
+    transition: transform 0.15s ease;
+}
+
+.cart-item-card:hover .quantity-badge {
+    transform: scale(1.1);
+}
+
+
 /* Back of card - success message */
 .product-card-back {
     transform: rotateY(180deg);
