@@ -1,16 +1,28 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Your Cart | The Verdant Gamer</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <title>Your Cart | The Verdant Gamer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-
 <body class="is-preload">
-<div id="wrapper">
+<div id="page-wrapper">
 
-	<!-- Nav -->
+    <!-- Header -->
+    <section id="header">
+        <div class="container">
+            <a href="contact.html" class="comic-button">CONTACT US!</a>
+            
+            <!-- Cart Icon -->
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <span class="cart-count">0</span>
+                    <i class="fa-solid fa-dice-d20"></i>
+                </a>
+            </div>
+
             <!-- Hamburger -->
             <a href="#navPanel" id="hamburger" aria-label="Menu">☰</a>
 
@@ -39,42 +51,35 @@
         <a href="custom.html" class="link">✨ Custom Stuff</a>
     </nav>
 
-	<!-- Main -->
-	<div id="main">
-		<section class="inner">
-			<header class="major">
-				<h1>Your Cart</h1>
-			</header>
+    <!-- Main -->
+    <section id="features">
+        <div class="container">
+            <header class="major">
+                <h1>Your Cart</h1>
+            </header>
+            <div id="cart-items"></div>
+            <hr />
+            <p id="cart-total"><strong>Total:</strong> $0</p>
+            <ul class="actions">
+                <li>
+                    <a href="#" class="button primary" onclick="clearCart()">Clear Cart</a>
+                </li>
+                <li>
+                    <a href="index.html" class="button">Continue Shopping</a>
+                </li>
+            </ul>
+            <p><em>Local pickup only. No shipping available.</em></p>
+        </div>
+    </section>
 
-			<div id="cart-items"></div>
-
-			<hr />
-
-			<p id="cart-total"><strong>Total:</strong> $0</p>
-
-			<ul class="actions">
-				<li>
-					<a href="#" class="button primary" onclick="clearCart()">Clear Cart</a>
-				</li>
-				<li>
-					<a href="index.html" class="button">Continue Shopping</a>
-				</li>
-			</ul>
-
-			<p><em>Local pickup only. No shipping available.</em></p>
-		</section>
-	</div>
-
-	<!-- Footer -->
-	<section id="footer">
-		<div class="container">
-			<div id="copyright">
-				<ul class="links">
-					<li>&copy; The Verdant Gamer LLC. All rights reserved.</li>
-				</ul>
-			</div>
-		</div>
-	</section>
+    <!-- Footer -->
+    <section id="footer">
+        <div id="copyright" class="container">
+            <ul class="links">
+                <li>&copy; The Verdant Gamer LLC. All rights reserved.</li>
+            </ul>
+        </div>
+    </section>
 
 </div>
 
@@ -83,10 +88,8 @@
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
-<script src="assets/js/cart.js?v=123"></script>
-
 <script src="assets/js/main.js"></script>
+<script src="assets/js/cart.js?v=123"></script>
 
 </body>
 </html>
-
