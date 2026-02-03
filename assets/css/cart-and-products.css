@@ -26,6 +26,7 @@
 
 .cart-icon a:hover i {
 	color: #D6B45A;
+	transform: scale(1.1) rotate(15deg);
 }
 
 .cart-count {
