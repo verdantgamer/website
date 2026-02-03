@@ -241,5 +241,4 @@
 									if (i.val() == '') {
 										i.addClass('polyfill-placeholder');
 										i.val(i.attr('placeholder'));
-
-})(jQuery);
+	));
