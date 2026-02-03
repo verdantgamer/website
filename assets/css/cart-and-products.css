@@ -167,10 +167,9 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Add to cart button styling */
+/* Add to cart button styling - HIDDEN */
 .product-card-front .add-to-cart {
-    margin: 1rem 0.5rem 0.5rem 0.5rem;
-    width: calc(100% - 1rem);
+    display: none;
 }
 
 /* ============================================
