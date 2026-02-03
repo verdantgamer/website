@@ -219,53 +219,7 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/cart.js"></script>
-<script>
-// Make cards clickable for adding to cart
-document.addEventListener('DOMContentLoaded', function() {
-    const clickableCards = document.querySelectorAll('.clickable-card .product-card-front');
-    
-    clickableCards.forEach(card => {
-        card.style.cursor = 'pointer';
-        
-        card.addEventListener('click', function() {
-            const productCard = this.closest('.product-card');
-            const productData = {
-                id: this.dataset.id,
-                name: this.dataset.name,
-                price: parseFloat(this.dataset.price),
-                image: this.dataset.image
-            };
-            
-            // Add to cart
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existingItem = cart.find(item => item.id === productData.id);
-            
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({ ...productData, quantity: 1 });
-            }
-            
-            localStorage.setItem('cart', JSON.stringify(cart));
-            
-            // Update cart count
-            const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-            const cartCountElement = document.querySelector('.cart-count');
-            if (cartCountElement) {
-                cartCountElement.textContent = cartCount;
-            }
-            
-            // Flip the card
-            productCard.classList.add('flipped');
-            
-            // Flip back after 2 seconds
-            setTimeout(() => {
-                productCard.classList.remove('flipped');
-            }, 2000);
-        });
-    });
-});
-</script>
+<script src="assets/js/cart-interactions.js"></script>
 
 </body>
 </html>
