@@ -159,12 +159,34 @@
     overflow: visible !important;
     height: auto !important;
     margin-bottom: 0 !important;
-    transition: none !important;
+    transition: all 0.3s ease !important;
 }
 
-.product-card-front .image.featured:hover {
-    transform: none !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+/* Hover effect for product cards - comic style like contact button */
+.clickable-card:hover .product-card-front .image.featured {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6), 
+                8px 8px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.clickable-card .product-card-front {
+    cursor: pointer;
+}
+
+/* Add to cart text styling */
+.add-to-cart-text {
+    color: #D6B45A !important;
+    font-weight: bold !important;
+    font-size: 0.9em !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    margin-top: 0.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.clickable-card:hover .add-to-cart-text {
+    color: #F5F1E8 !important;
+    transform: scale(1.05);
 }
 
 /* Add to cart button styling - HIDDEN */
@@ -187,6 +209,14 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for cart cards - comic style */
+.cart-item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6), 
+                8px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 .cart-item-card .remove-item {
