@@ -30,19 +30,10 @@
 }
 
 .cart-count {
-	position: absolute;
-	top: -8px;
-	right: -8px;
-	background: #D6B45A;
-	color: #1f2b24;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 4px 7px;
-	border-radius: 50%;
-	border: 2px solid #F5F1E8;
-	min-width: 24px;
-	text-align: center;
-	z-index: 101;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
 }
 
 /* Shop Items (legacy styles) */
