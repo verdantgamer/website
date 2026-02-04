@@ -241,6 +241,9 @@
     box-shadow: 1px 1px 0 #000;
 }
 
+.cart-item-card .remove-item {
+    display: none;
+}
 
 .cart-item-card .image.featured img {
     width: 100%;
