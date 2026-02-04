@@ -64,6 +64,59 @@
     box-shadow: 0.1em 0.15em 0 0 rgba(0, 0, 0, 0.125);
 }
 
+/* ============================================
+   CART ICON POSITIONING
+   ============================================ */
+
+/* Cart Icon in Header */
+.cart-icon {
+    position: absolute;
+    top: 3em;
+    right: 2em;
+    z-index: 100;
+}
+
+.cart-icon a {
+    position: relative;
+    display: inline-block;
+    color: #F5F1E8;
+    text-decoration: none;
+}
+
+.cart-icon i {
+    font-size: 2em;
+    transition: color 0.25s ease-in-out, transform 0.35s ease;
+}
+
+.cart-icon a:hover i {
+    color: #D6B45A;
+    transform: scale(1.1) rotate(15deg);
+}
+
+/* Cart Count Number */
+.cart-count {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #000;
+    pointer-events: none;
+    background: none;
+    border: none;
+    z-index: 10;
+}
+
+/* Mobile positioning for cart icon */
+@media screen and (max-width: 980px) {
+    .cart-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10001;
+    }
+}
 /* Nav (from original main.css) */
 #nav {
     position: absolute;
