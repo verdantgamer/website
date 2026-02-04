@@ -5,23 +5,17 @@
 
 /* Cart Icon */
 .cart-icon {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	z-index: 100;
+    position: relative;
+    display: inline-block;
 }
 
 .cart-icon a {
-	position: relative;
-	display: block;
-	text-decoration: none;
-	border: none !important;
+    position: relative;
+    display: inline-block;
 }
 
 .cart-icon i {
-	font-size: 32px !important;
-	color: #F5F1E8;
-	transition: color 0.25s ease, transform 0.25s ease;
+    font-size: 24px; /* Adjust dice size as needed */
 }
 
 .cart-icon a:hover i {
@@ -30,10 +24,16 @@
 }
 
 .cart-count {
-    background: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px; /* Adjust to fit inside dice */
+    font-weight: bold;
+    color: white; /* Or whatever color shows up best */
+    pointer-events: none; /* So clicks go through to the link */
+    background: none;
+    border: none;
 }
 
 /* Shop Items (legacy styles) */
