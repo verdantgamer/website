@@ -80,7 +80,8 @@
     position: relative;
     display: inline-block;
     color: #F5F1E8;
-    text-decoration: none;
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
 
 .cart-icon i {
@@ -100,6 +101,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 0.9em;
+	font-weight: 900 !important;
     font-weight: bold;
     color: #000;
     pointer-events: none;
