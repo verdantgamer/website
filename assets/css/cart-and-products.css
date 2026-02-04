@@ -3,43 +3,6 @@
    Cart icon, product cards, shop items, and cart functionality
    ============================================ */
 
-/* Fix cart icon positioning in header */
-.cart-icon {
-    position: absolute;
-    top: 20px;
-    right: 80px; /* Adjust based on where you want it */
-    display: inline-block;
-}
-
-.cart-icon a {
-    position: relative;
-    display: inline-block;
-    color: #F5F1E8; /* Or whatever your nav link color is */
-}
-
-.cart-icon i {
-    font-size: 24px;
-}
-
-.cart-icon a:hover i {
-	color: #D6B45A;
-	transform: scale(1.1) rotate(15deg);
-}
-
-/* Make cart count appear on TOP of the dice */
-.cart-count {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 12px;
-    font-weight: bold;
-    color: #000; /* Changed to black for better contrast */
-    pointer-events: none;
-    background: none;
-    border: none;
-    z-index: 10; /* This puts it on top of the dice icon */
-}
 
 
 /* Shop Items (legacy styles) */
