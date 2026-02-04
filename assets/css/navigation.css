@@ -70,7 +70,7 @@
 
 /* Cart Icon in Header */
 .cart-icon {
-    position: absolute;
+    position: fixed;
     top: 3em;
     right: 2em;
     z-index: 100;
