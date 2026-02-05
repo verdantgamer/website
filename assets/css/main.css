@@ -1870,22 +1870,17 @@ button.alt:active,
 }
 
 /* Force equal height cards */
-#features .row {
-	align-items: stretch !important;
-}
-
-#features .row > div {
-	display: flex !important;
-}
-
-#features .row > div > section {
-	display: flex !important;
-	width: 100% !important;
-}
-
-#features .row > div > section > a {
-	width: 100% !important;
-}
+    #features .row > div {
+        width: 370px !important;
+        min-width: 370px !important;
+        max-width: 370px !important;
+        flex: 0 0 370px !important;
+    }
+    
+    #features .row {
+        justify-content: center !important;
+        gap: 2em !important;
+    }
 
 /* Banner */
 
