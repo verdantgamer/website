@@ -94,11 +94,11 @@
     transform: scale(1.1) rotate(15deg);
 }
 
-/* Cart Count Badge */
+/* Cart Count Badge - Desktop */
 .cart-count {
     position: absolute;
-    top: 1em;
-    left: 0.65em;
+    top: 0.45em;
+    left: 0.55em;
     min-width: 18px;
     height: 18px;
     padding: 1px 4px;
@@ -122,7 +122,21 @@
         right: 20px;
         z-index: 10001;
     }
+    
+    .cart-count {
+        top: 0.45em;
+        left: 0.55em;
+    }
 }
+
+/* Desktop-specific adjustment if needed */
+@media screen and (min-width: 981px) {
+    .cart-count {
+        top: 0.5em;
+        left: 0.5em;
+    }
+}
+
 /* Nav (from original main.css) */
 #nav {
     position: absolute;
