@@ -94,20 +94,20 @@
     transform: scale(1.1) rotate(15deg);
 }
 
-/* Cart Count Badge */
+/* Cart Count Number */
 .cart-count {
     position: absolute;
-    top: -8px;
-    right: -8px;
-    min-width: 20px;
-    height: 20px;
-    padding: 2px 6px;
-    font-size: 0.7em;
-    font-weight: 900 !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9em;
+	font-weight: 900 !important;
+    font-weight: bold;
     color: #000;
-    text-align: center;
-    line-height: 16px;
     pointer-events: none;
+    background: none;
+    border: none;
+    z-index: 10;
 }
 
 /* Mobile positioning */
