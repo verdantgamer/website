@@ -100,14 +100,11 @@
     top: 3em;
     right: 2em;
     z-index: 100;
-    transform: translate(-50%, -50%);
     font-size: 0.9em;
 	font-weight: 900 !important;
     color: #000;
-    pointer-events: none;
     background: none;
     border: none;
-    z-index: 10;
 }
 
 .cart-count a {
