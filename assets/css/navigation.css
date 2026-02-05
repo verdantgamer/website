@@ -97,9 +97,8 @@
 /* Cart Count Badge */
 .cart-count {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0.5em;
+    left: 0.5em;
     min-width: 18px;
     height: 18px;
     padding: 1px 4px;
