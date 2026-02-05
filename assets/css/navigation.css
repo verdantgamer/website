@@ -110,6 +110,11 @@
     z-index: 10;
 }
 
+.cart-count a:hover i {
+    color: #D6B45A;
+    transform: scale(1.1) rotate(15deg);
+}
+
 /* Mobile positioning for cart icon */
 @media screen and (max-width: 980px) {
     .cart-icon {
