@@ -1869,10 +1869,6 @@ button.alt:active,
 	text-align: center;
 }
 
-#features ul.actions {
-	margin-top: 1.25em;
-}
-
 /* Force equal height cards */
 #features .row {
 	align-items: stretch !important;
