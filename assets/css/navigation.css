@@ -68,7 +68,7 @@
    CART ICON POSITIONING
    ============================================ */
 
-/* Cart Icon in Header */
+/* Cart Icon Container */
 .cart-icon {
     position: fixed;
     top: 3em;
@@ -94,32 +94,26 @@
     transform: scale(1.1) rotate(15deg);
 }
 
-/* Cart Count Number */
+/* Cart Count Badge */
 .cart-count {
-    position: fixed;
-    top: 3em;
-    right: 2em;
-    z-index: 100;
-    font-size: 0.9em;
-	font-weight: 900 !important;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 20px;
+    height: 20px;
+    padding: 2px 6px;
+    background: #D6B45A;
+    border: 2px solid #000;
+    border-radius: 50%;
+    font-size: 0.7em;
+    font-weight: 900 !important;
     color: #000;
-    background: none;
-    border: none;
+    text-align: center;
+    line-height: 16px;
+    pointer-events: none;
 }
 
-.cart-count a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none !important;
-    border-bottom: none !important;
-}
-
-.cart-count a:hover i {
-    color: #D6B45A;
-    transform: scale(1.1) rotate(15deg);
-}
-
-/* Mobile positioning for cart icon */
+/* Mobile positioning */
 @media screen and (max-width: 980px) {
     .cart-icon {
         position: fixed;
