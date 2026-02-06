@@ -1,0 +1,479 @@
+/* ============================================
+   UNIFIED CARD SYSTEM
+   Shared card styles for feature cards (home) and product cards (shop pages)
+   ============================================ */
+
+/* ============================================
+   BASE CARD STRUCTURE - Used by both features and products
+   ============================================ */
+
+.feature-card,
+.product-card {
+    position: relative;
+    background: transparent;
+    height: 100%;
+    min-height: 400px;
+}
+
+/* Card wrapper that can flip (only used for products) */
+.product-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.product-card.flipped .product-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ============================================
+   CARD FRONT FACE - MTG Style with Comic Hover
+   ============================================ */
+
+.feature-card .card-front,
+.product-card-front {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Product cards need absolute positioning for flip */
+.product-card-front {
+    position: absolute;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+/* MTG Card Styling */
+.feature-card .image.featured,
+.product-card-front .image.featured {
+    background: #C97A5A !important;
+    padding: 8px !important;
+    border-radius: 12px !important;
+    border: 6px solid #000 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+    overflow: visible !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+/* Comic-style hover effect - LIFT AND SHADOW */
+.feature-card:hover .image.featured,
+.clickable-card:hover .product-card-front .image.featured {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6), 
+                8px 8px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Card image */
+.feature-card .image.featured img,
+.product-card-front .image.featured img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
+    display: block !important;
+    border: 4px solid #000 !important;
+    flex-shrink: 0 !important;
+}
+
+/* Card info section */
+.feature-card .card-info,
+.product-card-front .card-info {
+    padding: 18px 12px !important;
+    text-align: center !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    min-height: 120px !important;
+}
+
+/* Card title */
+.feature-card .card-info h3,
+.product-card-front .card-info h3 {
+    background: #649e66 !important;
+    color: #D6B45A !important;
+    margin: 0 0 0.6em 0 !important;
+    font-size: 1em !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    border-radius: 4px !important;
+    display: block !important;
+    border: 2px solid #000 !important;
+    flex-shrink: 0 !important;
+    padding: 0.5rem !important;
+}
+
+/* Card description */
+.feature-card .card-info p,
+.product-card-front .card-info p {
+    color: #F5F1E8 !important;
+    margin: 0 !important;
+    font-size: 0.85em !important;
+    line-height: 1.4em !important;
+    text-align: center !important;
+}
+
+/* Price styling (products only) */
+.product-card-front .card-info .price {
+    font-weight: bold !important;
+    font-size: 1rem !important;
+    margin: 0.5rem 0 !important;
+}
+
+/* Add to cart text */
+.add-to-cart-text {
+    color: #D6B45A !important;
+    font-weight: bold !important;
+    font-size: 0.9em !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    margin-top: 0.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.clickable-card:hover .add-to-cart-text {
+    color: #F5F1E8 !important;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   CARD BACK FACE - Success Message (Products Only)
+   ============================================ */
+
+.product-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    border: 6px solid #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.product-card-back .success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-card-back .checkmark {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.product-card-back .success-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ============================================
+   FIXED CARD LAYOUT - Prevents shifting
+   ============================================ */
+
+/* Desktop: Lock cards to fixed width */
+@media screen and (min-width: 981px) {
+    #features .row > div {
+        width: 370px !important;
+        min-width: 370px !important;
+        max-width: 370px !important;
+        flex: 0 0 370px !important;
+    }
+    
+    #features .row {
+        justify-content: center !important;
+        gap: 2em !important;
+    }
+}
+
+/* Large screens: Slightly smaller cards */
+@media screen and (max-width: 1280px) and (min-width: 981px) {
+    #features .row > div {
+        width: 340px !important;
+        min-width: 340px !important;
+        max-width: 340px !important;
+        flex: 0 0 340px !important;
+    }
+}
+
+/* Mobile: Stack cards */
+@media screen and (max-width: 980px) {
+    #features .row > div {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+    }
+    
+    .feature-card,
+    .product-card {
+        min-height: 350px;
+    }
+    
+    .product-card-inner {
+        min-height: 350px;
+    }
+}
+
+/* ============================================
+   FORCE EQUAL HEIGHT CARDS
+   ============================================ */
+
+#features .row {
+    align-items: stretch !important;
+}
+
+#features .row > div {
+    display: flex !important;
+}
+
+#features .row > div > section {
+    display: flex !important;
+    width: 100% !important;
+}
+
+/* ============================================
+   LEGACY SHOP ITEMS (if still used)
+   ============================================ */
+
+.shop-items {
+    width: 100%;
+}
+
+.item {
+    display: inline-block;
+    width: 280px;
+    margin: 1rem;
+    vertical-align: top;
+    text-align: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+/* ============================================
+   CART ITEM CARDS (Cart Page)
+   ============================================ */
+
+.cart-item-card {
+    position: relative;
+    background: #C97A5A;
+    padding: 8px;
+    border-radius: 12px;
+    border: 6px solid #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.cart-item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6), 
+                8px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.cart-item-card .remove-item {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 0, 0, 0.9);
+    color: white;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.cart-item-card .remove-item:hover {
+    background: rgba(255, 0, 0, 1);
+    transform: scale(1.1);
+}
+
+.cart-item-card .remove-item:active {
+    transform: scale(0.95);
+    box-shadow: 1px 1px 0 #000;
+}
+
+.cart-item-card .image.featured img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none !important;
+}
+
+.cart-item-card .card-info {
+    padding: 1.5rem 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.cart-item-card .card-info h3 {
+    background: #649e66;
+    color: #D6B45A;
+    margin: 0 0 0.75rem 0;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 2px solid #000;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.cart-item-card .card-info .price {
+    font-size: 1rem;
+    color: #F5F1E8;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.cart-item-card .quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.cart-item-card .quantity-btn {
+    background: #D6B45A;
+    color: #1f2b24;
+    border: 2px solid #000;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.cart-item-card .quantity-btn:hover {
+    background: #C97A5A;
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 0 #000;
+}
+
+.cart-item-card .quantity-btn:active {
+    transform: translateY(0);
+    box-shadow: 1px 1px 0 #000;
+}
+
+.cart-item-card .quantity-display {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #F5F1E8;
+    min-width: 40px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.cart-item-card .item-total {
+    margin-top: auto;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    color: #D6B45A;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Cart Total Section */
+#cart-total {
+    font-size: 1.8rem;
+    text-align: right;
+    padding: 1.5rem;
+    background: #C97A5A;
+    border: 4px solid #000;
+    border-radius: 8px;
+    margin: 2rem 0;
+    color: #F5F1E8;
+    box-shadow: 4px 4px 0 #000;
+}
+
+#cart-total strong {
+    color: #D6B45A;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media screen and (max-width: 736px) {
+    .feature-card .image.featured img,
+    .product-card-front .image.featured img,
+    .cart-item-card .image.featured {
+        height: 180px;
+    }
+    
+    .product-card-back .checkmark {
+        font-size: 3rem;
+    }
+    
+    .product-card-back .success-message {
+        font-size: 1.2rem;
+    }
+    
+    #cart-total {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .cart-item-card .remove-item {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
