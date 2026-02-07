@@ -69,21 +69,6 @@
     }
 }
 
-/* Image Featured Card Hover Animation */
-.image.featured {
-    background: #C97A5A !important;
-    padding: 8px !important;
-    border-radius: 12px !important;
-    border: 6px solid #000 !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    text-decoration: none !important;
-    overflow: visible !important;
-    height: 100% !important;
-}
-
 
 /* Link and Button Transitions */
 a {
