@@ -306,36 +306,6 @@
                 8px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-.cart-item-card .remove-item {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: rgba(255, 0, 0, 0.9);
-    color: white;
-    border: 2px solid #000;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    transition: background 0.3s ease, transform 0.2s ease;
-    font-size: 1.1rem;
-    font-weight: bold;
-    box-shadow: 2px 2px 0 #000;
-}
-
-.cart-item-card .remove-item:hover {
-    background: rgba(255, 0, 0, 1);
-    transform: scale(1.1);
-}
-
-.cart-item-card .remove-item:active {
-    transform: scale(0.95);
-    box-shadow: 1px 1px 0 #000;
-}
 
 .cart-item-card .image.featured img {
     width: 100%;
