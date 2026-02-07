@@ -306,6 +306,9 @@
                 8px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
+.cart-item-card .remove-item {
+    display: none !important;
+}
 
 .cart-item-card .image.featured img {
     width: 100%;
