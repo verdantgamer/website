@@ -106,9 +106,6 @@ function displayCart() {
         
         cartHTML += '<div class="col-4 col-6-medium col-12-small">' +
             '<section class="cart-item-card">' +
-            '<button class="remove-item" onclick="removeFromCart(\'' + item.id + '\')" title="Remove from cart">' +
-            '<i class="fas fa-times"></i>' +
-            '</button>' +
             '<div class="image featured">' +
             '<img src="' + item.image + '" alt="' + item.name + '" />' +
             '</div>' +
