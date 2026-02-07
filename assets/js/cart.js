@@ -64,7 +64,14 @@ function showCardFlipFeedback(button) {
     }
 }
 
-
+// Remove item from cart
+function removeFromCart(id) {
+    cart = cart.filter(function(item) {
+        return item.id !== id;
+    });
+    saveCart();
+    displayCart();
+}
 
 // Update item quantity
 function updateQuantity(id, change) {
@@ -81,14 +88,7 @@ function updateQuantity(id, change) {
         }
     }
 }
-// Remove item from cart
-function removeFromCart(id) {
-    cart = cart.filter(function(item) {
-        return item.id !== id;
-    });
-    saveCart();
-    displayCart();
-} 
+
 // Display cart items on cart page
 function displayCart() {
     const cartItemsContainer = document.getElementById('cart-items');
