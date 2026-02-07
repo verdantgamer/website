@@ -64,14 +64,7 @@ function showCardFlipFeedback(button) {
     }
 }
 
-// Remove item from cart
-function removeFromCart(id) {
-    cart = cart.filter(function(item) {
-        return item.id !== id;
-    });
-    saveCart();
-    displayCart();
-}
+
 
 // Update item quantity
 function updateQuantity(id, change) {
