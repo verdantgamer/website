@@ -82,10 +82,7 @@ html {
 
 body {
 	background: #8FBFA3;
-}
-body-background {
-	background-image: url('images/website-background.png');
-	background: #000;
+	background-image: url('images/website-background.png') #000;
     background-repeat: repeat;
     background-size: 400px 400px;
 }
