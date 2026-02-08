@@ -1716,7 +1716,7 @@ table thead {
 
 table tfoot {
 	background: #F5F1E8;
-	border-top: solid 2px #8FBFA3;
+	border-top: solid 2px transparent;
 }
 
 /* Button - Base styles only (transitions moved to animations.css) */
@@ -1994,7 +1994,7 @@ button.alt:active,
 #footer {
 	position: relative;
 	overflow: hidden;
-	border-top: solid 2px #8FBFA3;
+	border-top: solid 2px transparent;
 	background: transparent;
 	padding: 6em 0 8em 0;
 }
@@ -2004,7 +2004,7 @@ button.alt:active,
 #footer form input[type="password"],
 #footer form select,
 #footer form textarea {
-	background: #8FBFA3;
+	background: transparent;
 }
 
 #footer form input[type="text"]:focus,
@@ -2012,7 +2012,7 @@ button.alt:active,
 #footer form input[type="password"]:focus,
 #footer form select:focus,
 #footer form textarea:focus {
-	background: #8FBFA3;
+	background: transparent;
 }
 
 #footer h2 {
