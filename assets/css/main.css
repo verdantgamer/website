@@ -1444,48 +1444,6 @@ article:last-child {
 	width: 100%;
 }
 
-.image.featured img {
-	width: 100% !important;
-	height: 220px !important;
-	object-fit: cover !important;
-	border-radius: 4px !important;
-	display: block !important;
-	border: 4px solid #000 !important;
-	flex-shrink: 0 !important;
-}
-
-.image.featured .card-info {
-	padding: 18px 12px !important;
-	text-align: center !important;
-	flex-grow: 1 !important;
-	display: flex !important;
-	flex-direction: column !important;
-	justify-content: center !important;
-	min-height: 120px !important;
-}
-
-.image.featured .card-info h3 {
-	background: #649e66 !important;
-	color: #D6B45A !important;
-	margin: 0 0 0.6em 0 !important;
-	font-size: 1em !important;
-	letter-spacing: 2px !important;
-	text-transform: uppercase !important;
-	object-fit: cover !important;
-	border-radius: 4px !important;
-	display: block !important;
-	border: 2px solid #000 !important;
-	flex-shrink: 0 !important;
-}
-
-.image.featured .card-info p {
-	color: #F5F1E8 !important;
-	margin: 0 !important;
-	font-size: 0.85em !important;
-	line-height: 1.4em !important;
-	text-align: center !important;
-}
-
 .image.left {
 	float: left;
 	margin: 0 1.5em 1.5em 0;
@@ -1856,7 +1814,7 @@ button.alt:active,
 	text-align: center;
 }
 
-/* Features - FIXED: Made transparent to show body background */
+/* Features */
 
 #features {
 	position: relative;
@@ -1870,20 +1828,7 @@ button.alt:active,
 	text-align: center;
 }
 
-/* Force equal height cards */
-#features .row > div {
-	width: 370px !important;
-	min-width: 370px !important;
-	max-width: 370px !important;
-	flex: 0 0 370px !important;
-}
-
-#features .row {
-	justify-content: center !important;
-	gap: 2em !important;
-}
-
-/* Main - FIXED: Made transparent to show body background */
+/* Main */
 
 #main {
 	position: relative;
