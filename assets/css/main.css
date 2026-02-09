@@ -81,24 +81,12 @@ html {
 }
 
 body {
-	background-color: #8FBFA3;
-	position: relative;
-}
-
-body::before {
-	content: "";
-	position: fixed;
-	inset: 0;
-	background-image: url("images/website-background.png");
-	background-repeat: repeat;
-	background-size: 160px 160px;
-
-	/* THIS tints the image */
-	filter: brightness(0) invert(1);
-	opacity: 0.15;
-
-	pointer-events: none;
-	z-index: -1;
+    background: #8FBFA3;
+    background-image: url('assets/css/images/website-background.png');
+    background-repeat: repeat;
+    background-size: 200px 200px; /* Make it smaller/more visible */
+    opacity: 1; /* Ensure full opacity */
+    /* Remove blend-mode temporarily */
 }
 
 
