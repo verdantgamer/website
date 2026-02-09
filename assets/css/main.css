@@ -1928,7 +1928,7 @@ button.alt:active,
 	padding: 0;
 }
 
-/* Footer - FIXED: Made transparent to show body background */
+/* Footer */
 
 #footer {
 	position: relative;
@@ -1938,21 +1938,6 @@ button.alt:active,
 	padding: 6em 0 8em 0;
 }
 
-#footer form input[type="text"],
-#footer form input[type="email"],
-#footer form input[type="password"],
-#footer form select,
-#footer form textarea {
-	background: transparent;
-}
-
-#footer form input[type="text"]:focus,
-#footer form input[type="email"]:focus,
-#footer form input[type="password"]:focus,
-#footer form select:focus,
-#footer form textarea:focus {
-	background: transparent;
-}
 
 #footer h2 {
 	text-align: center;
@@ -1961,10 +1946,9 @@ button.alt:active,
 /* Copyright */
 
 #copyright {
-	border-top: solid 2px #8FBFA3;
 	text-align: center;
-	margin-top: 6em;
-	padding-top: 4em;
+	margin-top: 2em;
+	padding-top: 2em;
 }
 
 /* Responsive - XLarge */
