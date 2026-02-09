@@ -84,9 +84,9 @@ body {
     background: #8FBFA3;
     background-image: url('assets/css/images/website-background.png');
     background-repeat: repeat;
-    background-size: 200px 200px; /* Make it smaller/more visible */
-    opacity: 1; /* Ensure full opacity */
-    /* Remove blend-mode temporarily */
+    background-size: 300px 300px; /* Make it smaller/more visible */
+    background-attachment: fixed; /* ADD THIS - keeps pattern in place while scrolling */
+    background-blend-mode: screen; /* Makes black transparent, shows gray/white */
 }
 
 
