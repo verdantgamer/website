@@ -1890,7 +1890,7 @@ button.alt:active,
 #banner {
 	position: relative;
 	overflow: hidden;
-	background: #8FBFA3;
+	background: transparent;
 	color: #8FBFA3;
 	text-align: center;
 	border-top: solid 2px #8FBFA3;
