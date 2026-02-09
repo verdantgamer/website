@@ -1831,8 +1831,6 @@ button.alt:active,
 
 #header > .container {
 	padding: 14em 0 7em 0;
-	border-bottom: solid 2px #8FBFA3;
-	box-shadow: inset 0px -8px 0px 0px #8FBFA3, inset 0px -10px 0px 0px #8FBFA3;
 }
 
 #header h1 {
