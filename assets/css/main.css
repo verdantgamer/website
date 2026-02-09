@@ -82,9 +82,10 @@ html {
 
 body {
     background-image: url('images/webback.png');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
-    background-blend-mode: multiply; /* or overlay, soft-light */
+    background-position: center;
 }
 
 body, input, textarea, select {
