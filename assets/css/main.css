@@ -80,13 +80,14 @@ html {
 	box-sizing: inherit;
 }
 
+/* FIXED: Background pattern on body */
 body {
-    background-color: red !important;
-    background-image: url('images/website-background.png') !important;
-    background-repeat: repeat !important;
-    background-size: 200px 200px !important;
+    background-color: #8FBFA3;
+    background-image: url('images/website-background.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    background-attachment: fixed;
 }
-
 
 body, input, textarea, select {
 	font-family: 'Source Sans Pro';
@@ -1825,7 +1826,6 @@ button.alt:active,
 
 #header {
 	position: relative;
-	position: relative;
 	background: #C97A5A;
 	text-align: center;
 }
@@ -1859,7 +1859,7 @@ button.alt:active,
 	text-align: center;
 }
 
-/* Features */
+/* Features - FIXED: Made transparent to show body background */
 
 #features {
 	position: relative;
@@ -1874,78 +1874,19 @@ button.alt:active,
 }
 
 /* Force equal height cards */
-    #features .row > div {
-        width: 370px !important;
-        min-width: 370px !important;
-        max-width: 370px !important;
-        flex: 0 0 370px !important;
-    }
-    
-    #features .row {
-        justify-content: center !important;
-        gap: 2em !important;
-    }
-
-/* Banner */
-
-#banner {
-	position: relative;
-	overflow: hidden;
-	background: transparent;
-	color: #8FBFA3;
-	text-align: center;
-	border-top: solid 2px #8FBFA3;
-	border-bottom: solid 2px #8FBFA3;
-	box-shadow: inset 0px -8px 0px 0px #8FBFA3, inset 0px 8px 0px 0px #8FBFA3;
-	position: relative;
-	text-transform: uppercase;
-	background: url("../../images/banner.jpg");
-	background-size: cover;
-	padding: 10em 0;
+#features .row > div {
+	width: 370px !important;
+	min-width: 370px !important;
+	max-width: 370px !important;
+	flex: 0 0 370px !important;
 }
 
-#banner p {
-	font-weight: 400;
-	font-size: 2em;
-	line-height: 1.5em;
-	letter-spacing: 4px;
-	text-align: center;
-	margin: 0;
+#features .row {
+	justify-content: center !important;
+	gap: 2em !important;
 }
 
-#banner strong {
-	color: inherit;
-}
-
-#banner > .container {
-	position: relative;
-}
-
-#banner > .container:before, #banner > .container:after {
-	content: '';
-	display: block;
-	position: absolute;
-	top: 50%;
-	width: 35px;
-	height: 141px;
-	margin-top: -70px;
-	background: url("images/bracket.svg");
-	opacity: 0.15;
-}
-
-#banner > .container:before {
-	left: 0;
-}
-
-#banner > .container:after {
-	-moz-transform: scaleX(-1);
-	-webkit-transform: scaleX(-1);
-	-ms-transform: scaleX(-1);
-	transform: scaleX(-1);
-	right: 0;
-}
-
-/* Main */
+/* Main - FIXED: Made transparent to show body background */
 
 #main {
 	position: relative;
@@ -1990,7 +1931,7 @@ button.alt:active,
 	padding: 0;
 }
 
-/* Footer */
+/* Footer - FIXED: Made transparent to show body background */
 
 #footer {
 	position: relative;
@@ -2066,18 +2007,6 @@ button.alt:active,
 
 	#features {
 		padding: 4em 0;
-	}
-
-	#banner {
-		padding: 8em 0;
-	}
-
-	#banner > .container {
-		padding: 0 4em;
-	}
-
-	#banner > .container br {
-		display: none;
 	}
 
 	#main {
@@ -2181,22 +2110,6 @@ button.alt:active,
 	#header p {
 		margin: 1.25em 0 0 0;
 		letter-spacing: 2px;
-	}
-
-	#banner {
-		padding: 5em 0;
-	}
-
-	#banner > .container {
-		padding: 0;
-	}
-
-	#banner > .container:before, #banner > .container:after {
-		display: none;
-	}
-
-	#banner p {
-		font-size: 1.25em;
 	}
 
 	#features {
