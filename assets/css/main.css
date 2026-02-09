@@ -80,11 +80,12 @@ html {
 	box-sizing: inherit;
 }
 
-/* FIXED: Background pattern on body */
 body {
     background-image: url('images/webback.png');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
 
 body, input, textarea, select {
