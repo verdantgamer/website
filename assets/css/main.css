@@ -81,11 +81,10 @@ html {
 }
 
 body {
-    background-color: #8FBFA3;
-    background-image: url('https://via.placeholder.com/200x200/000000/FFFFFF?text=TEST');
-    background-repeat: repeat;
-    background-size: 200px 200px; /* Make it smaller so more repeats */
-    filter: contrast(2); /* Increase contrast temporarily to see if it's there */
+    background-color: red !important;
+    background-image: url('images/website-background.png') !important;
+    background-repeat: repeat !important;
+    background-size: 200px 200px !important;
 }
 
 
