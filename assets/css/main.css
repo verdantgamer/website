@@ -81,12 +81,12 @@ html {
 }
 
 body {
-    background: #8FBFA3;
+    background-color: #8FBFA3;
     background-image: url('assets/css/images/website-background.png');
     background-repeat: repeat;
-    background-size: 300px 300px; /* Make it smaller/more visible */
-    background-attachment: fixed; /* ADD THIS - keeps pattern in place while scrolling */
-    background-blend-mode: screen; /* Makes black transparent, shows gray/white */
+    background-size: 300px 300px;
+    background-attachment: fixed;
+    /* Remove background-blend-mode completely */
 }
 
 
