@@ -82,8 +82,7 @@ html {
 
 /* FIXED: Background pattern on body */
 body {
-    background-color: #8FBFA3;
-    background-image: url('images/website-background.png');
+    background-image: url('images/webback.png');
     background-repeat: repeat;
     background-size: 300px 300px;
     background-attachment: fixed;
